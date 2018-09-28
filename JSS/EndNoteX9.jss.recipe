@@ -2,22 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-      	<key>Identifier</key>
-      	<string>local.jss.EndNoteX9</string>
+        <key>Description</key>
+        <string>Downloads EndNote X9 disk image and builds a package, then uploads to the JSS.</string>
+        <key>Identifier</key>
+      	<string>com.github.l3nny5.jss.EndNoteX9.Patchoo</string>
       	<key>Input</key>
       	<dict>
             		<key>CATEGORY</key>
             		<string>Apps</string>
-            		<key>DOWNLOAD_URL</key>
-            		<string>http://download.endnote.com/downloads/X9/EndNoteX9Installer.dmg</string>
             		<key>GROUP_NAME</key>
             		<string>%NAME%-update-smart</string>
             		<key>GROUP_TEMPLATE</key>
-            		<string>SmartGroupTemplate-custom.xml</string>
-            		<key>POLICY_CATEGORY</key>
+            		<string>SmartGroupTemplate-update.xml</string>
+                <key>NAME</key>
+                <string>EndNote X9</string>
+                <key>POLICY_CATEGORY</key>
             		<string>0-patchoo-dev</string>
             		<key>POLICY_TEMPLATE</key>
-            		<string>PolicyTemplate-custom.xml</string>
+            		<string>PolicyTemplate-update.xml</string>
             		<key>policy_action_type</key>
             		<string>Cache</string>
             		<key>package_priority</key>
