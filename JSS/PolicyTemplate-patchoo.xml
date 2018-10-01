@@ -1,0 +1,31 @@
+<policy>
+	<general>
+		<name>update%PROD_NAME%-%VERSION%</name>
+		<enabled>true</enabled>
+		<trigger>EVENT</trigger>
+		<trigger_other>update-dev</trigger_other>
+		<frequency>Ongoing</frequency>
+		<category>
+			<name>%POLICY_CATEGORY%</name>
+		</category>
+	</general>
+	<scope>
+		<!--Scope added by JSSImporter-->
+	</scope>
+	<package_configuration>
+		<!--Package added by JSSImporter-->
+	</package_configuration>
+	<scripts>
+		<script>
+      <name>0patchoo.sh</name>
+      <priority>After</priority>
+      <parameter4>--cache</parameter4>
+		</script>
+	</scripts>
+	<self_service>
+	  <!--Scripts added by JSSImporter-->
+	</self_service>
+	<maintenance>
+		<!--Scripts added by JSSImporter-->
+	</maintenance>
+</policy>

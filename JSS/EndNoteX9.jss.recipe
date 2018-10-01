@@ -13,13 +13,13 @@
                   <key>GROUP_NAME</key>
                   <string>%NAME%-update-smart</string>
                   <key>GROUP_TEMPLATE</key>
-                  <string>SmartGroupTemplate-update.xml</string>
+                  <string>SmartGroupTemplate-patchoo.xml</string>
                   <key>NAME</key>
                   <string>EndNote X9</string>
                   <key>POLICY_CATEGORY</key>
                   <string>0-patchoo-dev</string>
                   <key>POLICY_TEMPLATE</key>
-                  <string>PolicyTemplate-update.xml</string>
+                  <string>PolicyTemplate-patchoo.xml</string>
                   <key>policy_action_type</key>
                   <string>Cache</string>
                   <key>package_priority</key>
