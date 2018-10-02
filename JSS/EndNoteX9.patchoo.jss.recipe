@@ -58,9 +58,9 @@
                               <key>prod_name</key>
                               <string>%NAME%</string>
                               <key>version</key>
-                              <string>%VERSION%</string>
+                              <string>%version%</string>
                               <key>package_info</key>
-                              <string>%PKGINAME% %VERSION%</string>
+                              <string>%pkginame% %version%</string>
                         </dict>
                         <key>Processor</key>
                         <string>JSSImporter</string>
