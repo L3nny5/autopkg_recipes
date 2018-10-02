@@ -16,6 +16,8 @@
 			<string>SmartGroupTemplate-patchoo.xml</string>
 			<key>NAME</key>
 			<string>Atom</string>
+			<key>PKGINAME</key>
+                  <string>Atom</string>
 			<key>POLICY_CATEGORY</key>
 			<string>0-patchoo-dev</string>
 			<key>POLICY_TEMPLATE</key>
@@ -26,6 +28,8 @@
 			<string>10</string>
 			<key>package_boot_volume_required</key>
 			<string>False</string>
+			<key>version</key>
+			<string></string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.4.0</string>
