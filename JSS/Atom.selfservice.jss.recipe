@@ -23,11 +23,11 @@
 			<key>POLICY_TEMPLATE</key>
 			<string>PolicyTemplate-SelfService.xml</string>
 			<key>SELF_SERVICE_DESCRIPTION</key>
-			<string>A hackable text editor for the 21st Century.</string>
+			<string>Atom is a free and open-source text and source code editor for OS X, Linux, and Windows with support for plug-ins written in Node.js, and embedded Git Control.</string>
 			<key>SELF_SERVICE_ICON</key>
 			<string>Atom.png</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
-			<string>true</string>
+			<string>false</string>
 			<key>version</key>
 			<string></string>
 		</dict>
@@ -53,8 +53,6 @@
 							<string>%GROUP_TEMPLATE%</string>
 						</dict>
 					</array>
-					<key>policy_category</key>
-					<string>%POLICY_CATEGORY%</string>
 					<key>policy_template</key>
 					<string>%POLICY_TEMPLATE%</string>
 					<key>prod_name</key>
