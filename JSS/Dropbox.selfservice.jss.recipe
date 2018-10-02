@@ -28,6 +28,12 @@
                   <string>Dropbox.png</string>
                   <key>DESCRIPTION</key>
                   <string>Dropbox is an application that creates a special Finder folder that automatically syncs online and between your computers. It allows you to both store files on Dropbox's servers and keep them up-to-date between systems.</string>
+                  <key>SELF_SERVICE_FEATURE_MAINPAGE</key>
+			<string>false</string>
+			<key>package_priority</key>
+			<string>10</string>
+			<key>package_boot_volume_required</key>
+			<string>False</string>
             </dict>
             <key>MinimumVersion</key>
             <string>0.4.0</string>
@@ -46,7 +52,7 @@
                               <string>%JSS_INVENTORY_NAME%</string>
                               <key>category</key>
                               <string>%CATEGORY%</string>
-                              <key>policy_category</key>
+                              <key>policy_template</key>
                               <string>%POLICY_TEMPLATE%</string>
                               <key>self_service_icon</key>
                               <string>%ICON%</string>
