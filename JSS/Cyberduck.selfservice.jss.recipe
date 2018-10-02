@@ -10,6 +10,8 @@
             <dict>
                   <key>NAME</key>
                   <string>Cyberduck</string>
+                  <key>PKGINAME</key>
+                  <string>Cyberduck</string>
                   <key>CATEGORY</key>
                   <string>Apps</string>
                   <key>GROUP_NAME</key>
