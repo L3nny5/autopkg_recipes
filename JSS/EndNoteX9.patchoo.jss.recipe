@@ -60,7 +60,7 @@
                               <key>version</key>
                               <string>%version%</string>
                               <key>package_info</key>
-                              <string>%pkginame% %version%</string>
+                              <string>%PKGINAME% %version%</string>
                         </dict>
                         <key>Processor</key>
                         <string>JSSImporter</string>
