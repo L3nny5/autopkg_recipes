@@ -28,12 +28,12 @@
 			<string>Atom.png</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 			<string>false</string>
+			<key>version</key>
+			<string></string>
 			<key>package_priority</key>
 			<string>10</string>
 			<key>package_boot_volume_required</key>
 			<string>False</string>
-			<key>version</key>
-			<string></string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.4.0</string>
@@ -70,7 +70,7 @@
 					<key>version</key>
 					<string>%version%</string>
 					<key>package_info</key>
-					<string>%pkginame% %version%</string>
+					<string>%PKGINAME% %version%</string>
 				</dict>
 				<key>Processor</key>
 				<string>JSSImporter</string>
