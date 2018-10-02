@@ -8,16 +8,16 @@
             <string>com.github.l3nny5.jss.Patchoo.Cyberduck</string>
             <key>Input</key>
             <dict>
+                  <key>NAME</key>
+                  <string>Cyberduck</string>
+                  <key>PKGINAME</key>
+                  <string>Cyberduck</string>
                   <key>CATEGORY</key>
                   <string>Apps</string>
                   <key>GROUP_NAME</key>
                   <string>update%NAME%</string>
                   <key>GROUP_TEMPLATE</key>
                   <string>SmartGroupTemplate-patchoo.xml</string>
-                  <key>NAME</key>
-                  <string>Cyberduck</string>
-                  <key>PKGINAME</key>
-                  <string>Cyberduck</string>
                   <key>POLICY_CATEGORY</key>
                   <string>0-patchoo-dev</string>
                   <key>POLICY_TEMPLATE</key>
