@@ -27,7 +27,7 @@
                   <key>package_priority</key>
                   <string>10</string>
                   <key>package_boot_volume_required</key>
-                  <string>False</string>
+                  <string>True</string>
             </dict>
             <key>MinimumVersion</key>
             <string>1.0.0</string>
