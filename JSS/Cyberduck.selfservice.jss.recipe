@@ -17,7 +17,7 @@
                   <key>GROUP_TEMPLATE</key>
                   <string>SmartGroupTemplate-SelfService.xml</string>
                   <key>SELFSERVICE_CATEGORY</key>
-                  <string>Text Editing</string>
+                  <string>Data Management</string>
                   <key>POLICY_TEMPLATE</key>
                   <string>PolicyTemplate-SelfService.xml</string>
                   <key>SELF_SERVICE_FEATURE_MAINPAGE</key>
