@@ -45,6 +45,7 @@
                               <key>policy_category</key>
                               <string>%POLICY_CATEGORY%</string>
                               <key>policy_template</key>
+                              <string>%POLICY_TEMPLATE%</string>
                               <key>version</key>
                               <string>%version%</string>
                               <key>package_info</key>
