@@ -17,9 +17,9 @@
 	</package_configuration>
 	<scripts>
 		<script>
-      <name>0patchoo.sh</name>
-      <priority>After</priority>
-      <parameter4>--cache</parameter4>
+      		<name>0patchoo.sh</name>
+      		<priority>After</priority>
+      		<parameter4>--cache</parameter4>
 		</script>
 	</scripts>
 	<self_service>
