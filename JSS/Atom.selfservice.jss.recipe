@@ -28,6 +28,10 @@
 			<string>Atom.png</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 			<string>false</string>
+			<key>package_priority</key>
+			<string>10</string>
+			<key>package_boot_volume_required</key>
+			<string>False</string>
 			<key>version</key>
 			<string></string>
 		</dict>
@@ -40,8 +44,6 @@
 			<dict>
 				<key>Arguments</key>
 				<dict>
-					<key>category</key>
-					<string>%CATEGORY%</string>
 					<key>groups</key>
 					<array>
 						<dict>
@@ -64,9 +66,9 @@
 					<key>self_service_feature_mainpage</key>
 					<string>%SELF_SERVICE_FEATURE_MAINPAGE%</string>
 					<key>version</key>
-					<string>%version%</string>
+					<string>%VERSION%</string>
 					<key>package_info</key>
-					<string>%PKGINAME% %version%</string>
+					<string>%PKGINAME% %VERSION%</string>
 				</dict>
 				<key>Processor</key>
 				<string>JSSImporter</string>
