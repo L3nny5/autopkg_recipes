@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Download the latest version of Logitech Control Center and creates pkg.</string>
+    <key>Identifier</key>
+    <string>com.github.l3nny5.pkg.logitechcontrolcenter</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Logitech Control Center</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>ParentRecipe</key>
+    <string>com.github.gmarnin.download.logitechcontrolcenter</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleShortVersionString</string>
+            </dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/LogitechControlCenter-%version%.mpkg</string>
+            </dict>
+            <key>Processor</key>
+            <string>FileMover</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>path_list</key>
+                <array>
+                    <string>%RECIPE_CACHE_DIR%/LCC/</string>
+                </array>
+            </dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
