@@ -20,15 +20,6 @@
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Info.plist</string>
-            </dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
                 <key>source</key>
                 <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg</string>
                 <key>target</key>
