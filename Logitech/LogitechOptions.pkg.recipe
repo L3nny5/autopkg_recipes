@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+      <dict>
+            <key>Description</key>
+            <string>Download the latest version of Logitech Options (Bluetooth and USB) and imports it into Munki.</string>
+            <key>Identifier</key>
+            <string>com.github.l3nny5.pkg.logitechoptions</string>
+            <key>Input</key>
+            <dict>
+                  <key>NAME</key>
+                  <string>Logitech Options</string>
+            </dict>
+            <key>MinimumVersion</key>
+            <string>0.2.9</string>
+            <key>ParentRecipe</key>
+            <string>com.github.joshua-d-miller.download.logitechoptions</string>
+            <key>Process</key>
+            <array>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>input_plist_path</key>
+                              <string>%found_filename%/Contents/Info.plist</string>
+                              <key>plist_version_key</key>
+                              <string>CFBundleShortVersionString</string>
+                        </dict>
+                        <key>Processor</key>
+                        <string>Versioner</string>
+                  </dict>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>source</key>
+                              <string>%found_filename%/Contents/Resources/LogiMgr.mpkg</string>
+                              <key>target</key>
+                              <string>%RECIPE_CACHE_DIR%/LogitechOptions-%version%.mpkg</string>
+                        </dict>
+                        <key>Processor</key>
+                        <string>FileMover</string>
+                  </dict>
+            </array>
+      </dict>
+</plist>
