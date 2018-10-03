@@ -3,7 +3,7 @@
 <plist version="1.0">
       <dict>
             <key>Description</key>
-            <string>Download the latest version of Logitech Options (Bluetooth and USB) and imports it into Munki.</string>
+            <string>Download the latest version of Logitech Options (Bluetooth and USB) and creates mpkg.</string>
             <key>Identifier</key>
             <string>com.github.l3nny5.pkg.logitechoptions</string>
             <key>Input</key>
@@ -38,6 +38,17 @@
                         </dict>
                         <key>Processor</key>
                         <string>FileMover</string>
+                  </dict>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>path_list</key>
+                              <array>
+                                    <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
+                              </array>
+                        </dict>
+                        <key>Processor</key>
+                        <string>PathDeleter</string>
                   </dict>
             </array>
       </dict>
