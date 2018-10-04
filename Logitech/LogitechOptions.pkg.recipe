@@ -10,6 +10,8 @@
             <dict>
                   <key>NAME</key>
                   <string>Logitech Options</string>
+                  <key>NAMEWITHOUTSPACES</key>
+                  <string>LogitechOptions</string>
             </dict>
             <key>MinimumVersion</key>
             <string>0.2.9</string>
@@ -17,6 +19,17 @@
             <string>com.github.joshua-d-miller.download.logitechoptions</string>
             <key>Process</key>
             <array>
+                  <dict>
+                        <key>Processor</key>
+                        <string>PkgRootCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>pkgroot</key>
+                              <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                              <key>pkgdirs</key>
+                              <dict />
+                        </dict>
+                  </dict>
                   <dict>
                         <key>Arguments</key>
                         <dict>
@@ -29,26 +42,61 @@
                         <string>Versioner</string>
                   </dict>
                   <dict>
-                      <key>Processor</key>
-                      <string>PkgCopier</string>
-                      <key>Arguments</key>
-                      <dict>
-                          <key>source_pkg</key>
-                          <string>%found_filename%/Contents/Resources/LogiMgr.mpkg</string>
-                          <key>pkg_path</key>
-                          <string>%RECIPE_CACHE_DIR%/LogitechOptions-%version%.mpkg</string>
-                      </dict>
-                  </dict>      
-                  <dict>
+                        <key>Processor</key>
+                        <string>Copier</string>
                         <key>Arguments</key>
                         <dict>
-                              <key>path_list</key>
-                              <array>
-                                    <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
-                              </array>
+                              <key>source_path</key>
+                              <string>%found_filename%</string>
+                              <key>destination_path</key>
+                              <string>%RECIPE_CACHE_DIR%/Scripts/LogiMgr.app</string>
+                              <key>overwrite</key>
+                              <true />
                         </dict>
+                  </dict>
+                  <dict>
                         <key>Processor</key>
-                        <string>PathDeleter</string>
+                        <string>FileCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>file_path</key>
+                              <string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+                              <key>file_mode</key>
+                              <string>0755</string>
+                              <key>file_content</key>
+                              <string>#!/bin/bash
+
+                                    # Determine working directory
+                                    install_dir=$(dirname $0)
+
+                                    # Install Logitech Options
+                                    /usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LogiMgr.app/Contents/Resources/LogiMgr.mpkg" -target "$3"
+
+                                    exit 0
+                              </string>
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>PkgCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>pkg_request</key>
+                              <dict>
+                                    <key>pkgroot</key>
+                                    <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                                    <key>pkgname</key>
+                                    <string>%NAMEWITHOUTSPACES%-%version%</string>
+                                    <key>pkgtype</key>
+                                    <string>flat</string>
+                                    <key>id</key>
+                                    <string>de.mpg.aesthetics.pkg.LogitechOptions-%version%</string>
+                                    <key>version</key>
+                                    <string>%version%</string>
+                                    <key>scripts</key>
+                                    <string>Scripts</string>
+                              </dict>
+                        </dict>
                   </dict>
             </array>
       </dict>
