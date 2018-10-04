@@ -5,7 +5,7 @@
             <key>Description</key>
             <string>Download the latest version of Logitech Options (Bluetooth and USB) and creates mpkg.</string>
             <key>Identifier</key>
-            <string>com.github.l3nny5.pkg.logitechoptions</string>
+            <string>com.github.l3nny5.pkg.LogitechOptions</string>
             <key>Input</key>
             <dict>
                   <key>NAME</key>

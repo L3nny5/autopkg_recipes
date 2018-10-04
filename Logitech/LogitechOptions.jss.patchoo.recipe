@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Logitech Options, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.patchoo.logitechoptions</string>
+	<string>com.github.l3nny5.jss.patchoo.LogitechOptions</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -36,7 +36,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.l3nny5.pkg.logitechoptions</string>
+	<string>com.github.l3nny5.pkg.LogitechOptions</string>
 	<key>Process</key>
 	<array>
 		<dict>

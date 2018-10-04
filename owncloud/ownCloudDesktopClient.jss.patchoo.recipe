@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ownCloud Desktop Client, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.Patchoo.ownCloudDesktopClient</string>
+	<string>com.github.l3nny5.jss.patchoo.ownCloudDesktopClient</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
