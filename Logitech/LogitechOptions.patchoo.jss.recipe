@@ -11,11 +11,11 @@
 		<key>CATEGORY</key>
 		<string>Basic Software</string>
 		<key>GROUP_NAME</key>
-		<string>update%PKGINAME%</string>
+		<string>update%NAME%</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate-patchoo.xml</string>
 		<key>NAME</key>
-		<string>Logi Options</string>
+		<string>LogitechOptions</string>
 		<key>PKGINAME</key>
 		<string>Logitech Options</string>
 		<key>POLICY_CATEGORY</key>
