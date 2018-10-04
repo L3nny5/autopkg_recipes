@@ -66,13 +66,13 @@
                               <key>file_content</key>
                               <string>#!/bin/bash
 
-                                    # Determine working directory
-                                    install_dir=$(dirname $0)
+# Determine working directory
+install_dir=$(dirname $0)
 
-                                    # Install Logitech Options
-                                    /usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LogiMgr.app/Contents/Resources/LogiMgr.mpkg" -target "$3"
+# Install Logitech Options
+/usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LogiMgr.app/Contents/Resources/LogiMgr.mpkg" -target "$3"
 
-                                    exit 0
+exit 0
                               </string>
                         </dict>
                   </dict>
