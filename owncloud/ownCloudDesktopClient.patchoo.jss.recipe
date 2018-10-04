@@ -15,7 +15,7 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate-patchoo.xml</string>
 		<key>NAME</key>
-		<string>ownCloudDesktopClient</string>
+		<string>ownCloud</string>
 		<key>PKGINAME</key>
 		<string>ownCloud</string>
 		<key>POLICY_CATEGORY</key>
