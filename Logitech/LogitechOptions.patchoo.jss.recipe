@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of ownCloud Desktop Client, makes a pkg of it, and uploads to the JSS.</string>
+	<string>Downloads the latest version of Logitech Options, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.Patchoo.logitechoptions</string>
+	<string>com.github.l3nny5.jss.patchoo.logitechoptions</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -15,7 +15,7 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate-patchoo.xml</string>
 		<key>NAME</key>
-		<string>Logitech Options</string>
+		<string>Logi Options</string>
 		<key>PKGINAME</key>
 		<string>Logitech Options</string>
 		<key>POLICY_CATEGORY</key>
