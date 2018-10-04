@@ -70,7 +70,7 @@
 install_dir=$(dirname $0)
 
 # Install Logitech Options
-/usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg" -target "$3"
+/usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LCCInstaller.app/Contents/Resources/Logitech Control Center.mpkg" -target "$3"
 
 exit 0
                               </string>
