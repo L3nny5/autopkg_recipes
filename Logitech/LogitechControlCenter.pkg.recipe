@@ -1,55 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-    <key>Description</key>
-    <string>Download the latest version of Logitech Control Center and creates pkg.</string>
-    <key>Identifier</key>
-    <string>com.github.l3nny5.pkg.logitechcontrolcenter</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Logitech Control Center</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.2.9</string>
-    <key>ParentRecipe</key>
-    <string>com.github.gmarnin.download.logitechcontrolcenter</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Arguments</key>
+      <dict>
+            <key>Description</key>
+            <string>Download the latest version of Logitech Control Center and creates pkg.</string>
+            <key>Identifier</key>
+            <string>com.github.l3nny5.pkg.logitechcontrolcenter</string>
+            <key>Input</key>
             <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Resources/Logitech.bundle/Contents/Info.plist</string>
-                <key>plist_version_key</key>
-                <string>CFBundleShortVersionString</string>
+                  <key>NAME</key>
+                  <string>Logitech Control Center</string>
+                  <key>NAMEWITHOUTSPACES</key>
+                  <string>LogitechControlCenter</string>
             </dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>source</key>
-                <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg</string>
-                <key>target</key>
-                <string>%RECIPE_CACHE_DIR%/LogitechControlCenter-%version%.mpkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>FileMover</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>path_list</key>
-                <array>
-                    <string>%RECIPE_CACHE_DIR%/LCC/</string>
-                </array>
-            </dict>
-            <key>Processor</key>
-            <string>PathDeleter</string>
-        </dict>
-    </array>
-</dict>
+            <key>MinimumVersion</key>
+            <string>0.2.9</string>
+            <key>ParentRecipe</key>
+            <string>com.github.gmarnin.download.logitechcontrolcenter</string>
+            <key>Process</key>
+            <array>
+                  <dict>
+                        <key>Processor</key>
+                        <string>PkgRootCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>pkgroot</key>
+                              <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                              <key>pkgdirs</key>
+                              <dict />
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>input_plist_path</key>
+                              <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app/Contents/Resources/Logitech.bundle/Contents/Info.plist</string>
+                              <key>plist_version_key</key>
+                              <string>CFBundleShortVersionString</string>
+                        </dict>
+                        <key>Processor</key>
+                        <string>Versioner</string>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>Copier</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>source_path</key>
+                              <string>%RECIPE_CACHE_DIR%/LCC/LCC Installer.app</string>
+                              <key>destination_path</key>
+                              <string>%RECIPE_CACHE_DIR%/Scripts/LCCInstaller.app</string>
+                              <key>overwrite</key>
+                              <true />
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>FileCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>file_path</key>
+                              <string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+                              <key>file_mode</key>
+                              <string>0755</string>
+                              <key>file_content</key>
+                              <string>#!/bin/bash
+
+# Determine working directory
+install_dir=$(dirname $0)
+
+# Install Logitech Options
+/usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg" -target "$3"
+
+exit 0
+                              </string>
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>PkgCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>pkg_request</key>
+                              <dict>
+                                    <key>pkgroot</key>
+                                    <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                                    <key>pkgname</key>
+                                    <string>%NAMEWITHOUTSPACES%-%version%</string>
+                                    <key>pkgtype</key>
+                                    <string>flat</string>
+                                    <key>id</key>
+                                    <string>de.mpg.aesthetics.pkg.logitechcontrolcenter-%version%</string>
+                                    <key>version</key>
+                                    <string>%version%</string>
+                                    <key>scripts</key>
+                                    <string>Scripts</string>
+                              </dict>
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>path_list</key>
+                              <array>
+                                    <string>%RECIPE_CACHE_DIR%/LCC/</string>
+                                    <string>%RECIPE_CACHE_DIR%/Scripts/</string>
+                                    <string>%RECIPE_CACHE_DIR%/pkgroot/</string>
+                              </array>
+                        </dict>
+                        <key>Processor</key>
+                        <string>PathDeleter</string>
+                  </dict>
+            </array>
+      </dict>
 </plist>
