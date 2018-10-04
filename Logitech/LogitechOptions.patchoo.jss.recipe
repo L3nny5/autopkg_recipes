@@ -22,6 +22,8 @@
 		<string>0-patchoo-dev</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate-patchoo.xml</string>
+		<key>package_boot_volume_required</key>
+		<string>true</string>
 		<key>package_priority</key>
 		<string>10</string>
 		<key>policy_action_type</key>
