@@ -5,7 +5,7 @@
 		<key>Description</key>
 		<string>Downloads the latest version of Mendeley Desktop, creates PKG, uploads it to the JSS and creates SelfService Policy.</string>
 		<key>Identifier</key>
-		<string>com.github.l3nny5.jss.SelfService.googlechrome</string>
+		<string>com.github.l3nny5.jss.selfservice.Mendeley</string>
 		<key>Input</key>
 		<dict>
 			<key>CATEGORY</key>
