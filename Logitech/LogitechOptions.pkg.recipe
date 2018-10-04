@@ -29,16 +29,16 @@
                         <string>Versioner</string>
                   </dict>
                   <dict>
-                        <key>Arguments</key>
-                        <dict>
-                              <key>source</key>
-                              <string>%found_filename%/Contents/Resources/LogiMgr.mpkg</string>
-                              <key>target</key>
-                              <string>%RECIPE_CACHE_DIR%/LogitechOptions-%version%.mpkg</string>
-                        </dict>
-                        <key>Processor</key>
-                        <string>FileMover</string>
-                  </dict>
+                      <key>Processor</key>
+                      <string>PkgCopier</string>
+                      <key>Arguments</key>
+                      <dict>
+                          <key>source_pkg</key>
+                          <string>%found_filename%/Contents/Resources/LogiMgr.mpkg</string>
+                          <key>pkg_path</key>
+                          <string>%RECIPE_CACHE_DIR%/LogitechOptions-%version%.mpkg</string>
+                      </dict>
+                  </dict>      
                   <dict>
                         <key>Arguments</key>
                         <dict>
