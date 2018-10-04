@@ -14,6 +14,8 @@
 		<string>update%NAME%</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate-patchoo.xml</string>
+		<key>JSS_INVENTORY_NAME</key>
+		<string>Logi Options.app</string>
 		<key>NAME</key>
 		<string>LogitechOptions</string>
 		<key>PKGINAME</key>
@@ -53,6 +55,8 @@
 						<string>%GROUP_TEMPLATE%</string>
 					</dict>
 				</array>
+				<key>jss_inventory_name</key>
+				<string>%JSS_INVENTORY_NAME%</string>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
 				<key>policy_category</key>
