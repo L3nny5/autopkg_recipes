@@ -90,7 +90,7 @@ exit 0
                                     <key>pkgtype</key>
                                     <string>flat</string>
                                     <key>id</key>
-                                    <string>de.mpg.aesthetics.pkg.LogitechOptions-%version%</string>
+                                    <string>de.mpg.aesthetics.pkg.logitechoptions-%version%</string>
                                     <key>version</key>
                                     <string>%version%</string>
                                     <key>scripts</key>
