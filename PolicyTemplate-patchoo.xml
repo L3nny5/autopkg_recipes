@@ -1,6 +1,6 @@
 <policy>
 	<general>
-		<name>update%PROD_NAME%-%VERSION%</name>
+		<name>update%PROD_NAME%</name>
 		<enabled>true</enabled>
 		<trigger>EVENT</trigger>
 		<trigger_other>update-dev</trigger_other>
