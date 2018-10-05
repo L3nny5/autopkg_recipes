@@ -20,7 +20,7 @@
 			<name>Application Version</name>
 			<priority>2</priority>
 			<and_or>and</and_or>
-			<search_type>is not</search_type>
+			<search_type>not like</search_type>
 			<value>%VERSION%</value>
 		</criterion>
 	</criteria>
