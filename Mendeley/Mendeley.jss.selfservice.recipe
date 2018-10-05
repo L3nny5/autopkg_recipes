@@ -29,7 +29,7 @@
 			<key>SELF_SERVICE_ICON</key>
 			<string>MendeleyDesktop.png</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
-			<string>true</string>
+			<string>false</string>
 			<key>version</key>
 			<string></string>
 			<key>package_priority</key>
