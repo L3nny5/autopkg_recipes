@@ -16,6 +16,8 @@
 			<string>SmartGroupTemplateR-SelfService.xml</string>
 			<key>NAME</key>
 			<string>R</string>
+			<key>OS_REQUIREMENTS</key>
+			<string>10.13.x,10.12.x,10.11.x</string>
 			<key>JSS_INVENTORY_NAME</key>
 			<string>R.app</string>
 			<key>PKGINAME</key>
@@ -59,6 +61,10 @@
 							<string>%GROUP_TEMPLATE%</string>
 						</dict>
 					</array>
+					<key>os_requirements</key>
+					<string>%OS_REQUIREMENTS%</string>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
 					<key>policy_template</key>
 					<string>%POLICY_TEMPLATE%</string>
 					<key>prod_name</key>
