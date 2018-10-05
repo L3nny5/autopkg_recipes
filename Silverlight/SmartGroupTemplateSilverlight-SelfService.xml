@@ -6,13 +6,6 @@
 			<name>SilverlightVersion</name>
 			<priority>0</priority>
 			<and_or>and</and_or>
-			<search_type>is not</search_type>
-			<value>n/a</value>
-		</criterion>
-		<criterion>
-			<name>SilverlightVersion</name>
-			<priority>1</priority>
-			<and_or>or</and_or>
 			<search_type>not like</search_type>
 			<value>%VERSION%</value>
 		</criterion>
