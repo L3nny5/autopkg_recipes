@@ -13,7 +13,7 @@
 			<key>GROUP_NAME</key>
 			<string>update%NAME%</string>
 			<key>GROUP_TEMPLATE</key>
-			<string>CFBundleVersionSmartGroupTemplate-patchoo.xml</string>
+			<string>SmartGroupTemplateSkype-patchoo.xml</string>
 			<key>NAME</key>
 			<string>Skype</string>
 			<key>JSS_INVENTORY_NAME</key>
@@ -44,13 +44,6 @@
 				<dict>
 					<key>category</key>
 					<string>%CATEGORY%</string>
-					<key>extension_attributes</key>
-					<array>
-						<dict>
-							<key>ext_attribute_path</key>
-							<string>CFBundleVersionExtensionAttribute.xml</string>
-						</dict>
-					</array>
 					<key>groups</key>
 					<array>
 						<dict>

@@ -3,22 +3,15 @@
 	<is_smart>true</is_smart>
 	<criteria>
 		<criterion>
-			<name>version%NAME%</name>
-			<priority>0</priority>
-			<and_or>and</and_or>
-			<search_type>is not</search_type>
-			<value></value>
-		</criterion>
-		<criterion>
 			<name>Application Title</name>
-			<priority>1</priority>
+			<priority>0</priority>
 			<and_or>and</and_or>
 			<search_type>is not</search_type>
 			<value>%JSS_INVENTORY_NAME%</value>
 		</criterion>
 		<criterion>
-			<name>version%NAME%</name>
-			<priority>2</priority>
+			<name>Skype</name>
+			<priority>1</priority>
 			<and_or>or</and_or>
 			<search_type>is not</search_type>
 			<value>%VERSION%</value>
