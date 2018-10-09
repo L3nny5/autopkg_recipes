@@ -13,9 +13,11 @@
 			<key>GROUP_NAME</key>
 			<string>update%NAME%</string>
 			<key>GROUP_TEMPLATE</key>
-			<string>SmartGroupTemplate-patchoo.xml</string>
+			<string>SmartGroupTemplateFirefox-patchoo.xml</string>
 			<key>JSS_INVENTORY_NAME</key>
 			<string>Firefox.app</string>
+			<key>FIREFOXLOCALE</key>
+			<string>Firefox-DE</string>
 			<key>NAME</key>
 			<string>Firefox</string>
 			<key>PKGINAME</key>
@@ -55,6 +57,8 @@
 							<string>%GROUP_TEMPLATE%</string>
 						</dict>
 					</array>
+					<key>firefoxlocale</key>
+					<string>%FIREFOXLOCALE%</string>
 					<key>jss_inventory_name</key>
 					<string>%JSS_INVENTORY_NAME%</string>
 					<key>package_info</key>
