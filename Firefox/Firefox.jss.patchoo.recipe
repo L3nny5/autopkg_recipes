@@ -16,8 +16,6 @@
 			<string>SmartGroupTemplateFirefox-patchoo.xml</string>
 			<key>JSS_INVENTORY_NAME</key>
 			<string>Firefox.app</string>
-			<key>FIREFOXLOCALE</key>
-			<string>Firefox-DE</string>
 			<key>NAME</key>
 			<string>Firefox</string>
 			<key>PKGINAME</key>

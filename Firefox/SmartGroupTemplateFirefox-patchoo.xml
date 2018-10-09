@@ -35,7 +35,7 @@
 			<priority>4</priority>
 			<and_or>and</and_or>
 			<search_type>member of</search_type>
-			<value>%FIREFOXLOCALE%</value>
+			<value>%NAME%</value>
 		</criterion>
 	</criteria>
 </computer_group>
