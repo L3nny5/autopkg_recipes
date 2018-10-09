@@ -55,8 +55,6 @@
 							<string>%GROUP_TEMPLATE%</string>
 						</dict>
 					</array>
-					<key>firefoxlocale</key>
-					<string>%FIREFOXLOCALE%</string>
 					<key>jss_inventory_name</key>
 					<string>%JSS_INVENTORY_NAME%</string>
 					<key>package_info</key>
