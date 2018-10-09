@@ -87,6 +87,17 @@
                               </dict>
                         </dict>
                   </dict>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>path_list</key>
+                              <array>
+                                    <string>%pkgroot%</string>
+                              </array>
+                        </dict>
+                        <key>Processor</key>
+                        <string>PathDeleter</string>
+                  </dict>
             </array>
       </dict>
 </plist>
