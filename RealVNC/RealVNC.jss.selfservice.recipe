@@ -69,8 +69,6 @@
 					<string>%SELF_SERVICE_ICON%</string>
 					<key>self_service_feature_mainpage</key>
 					<string>%SELF_SERVICE_FEATURE_MAINPAGE%</string>
-					<key>version</key>
-					<string>%version%</string>
 					<key>package_info</key>
 					<string>%PKGINAME% %version%</string>
 				</dict>
