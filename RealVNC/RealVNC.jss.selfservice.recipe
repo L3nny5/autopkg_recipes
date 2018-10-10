@@ -30,8 +30,6 @@
 			<string>VNCViewer.png</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 			<string>false</string>
-			<key>version</key>
-			<string></string>
 			<key>package_priority</key>
 			<string>10</string>
 			<key>package_boot_volume_required</key>
