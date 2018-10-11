@@ -3,9 +3,9 @@
 <plist version="1.0">
 	<dict>
 		<key>Description</key>
-		<string>Downloads the latest version of Gephi, creates PKG, uploads it to the JSS and creates SelfService Policy.</string>
+		<string>Creates PKG of Audacity (you have to download it first and put it into the folder), uploads it to the JSS and creates SelfService Policy.</string>
 		<key>Identifier</key>
-		<string>com.github.l3nny5.jss.selfservice.Gephi</string>
+		<string>com.github.l3nny5.jss.selfservice.Audacity</string>
 		<key>Input</key>
 		<dict>
 			<key>CATEGORY</key>
@@ -15,21 +15,21 @@
 			<key>GROUP_TEMPLATE</key>
 			<string>SmartGroupTemplate-SelfService.xml</string>
 			<key>JSS_INVENTORY_NAME</key>
-			<string>Gephi.app</string>
+			<string>Audacity.app</string>
 			<key>NAME</key>
-			<string>Gephi</string>
+			<string>Audacity</string>
 			<key>PKGINAME</key>
-			<string>Gephi</string>
+			<string>Audacity</string>
 			<key>POLICY_TEMPLATE</key>
 			<string>PolicyTemplate-SelfService.xml</string>
 			<key>SELFSERVICE_CATEGORY</key>
-			<string>Graphic Editing</string>
+			<string>Audio</string>
 			<key>SELF_SERVICE_DESCRIPTION</key>
-			<string>Gephi is an open-source network analysis and visualization software package written in Java on the NetBeans platform,[3] initially developed by students of the University of Technology of Compiègne (UTC)[4] in France.</string>
+			<string>Audacity is a free open source digital audio editor and recording computer software application.</string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 			<string>false</string>
 			<key>SELF_SERVICE_ICON</key>
-			<string>Gephi.png</string>
+			<string>Audacity.png</string>
 			<key>package_boot_volume_required</key>
 			<string>false</string>
 			<key>package_priority</key>
