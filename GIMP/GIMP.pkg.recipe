@@ -7,7 +7,7 @@
             <key>Description</key>
             <string>Downloads the latest version of GIMP from gimp.org and builds a pkg.</string>
             <key>Identifier</key>
-            <string>com.github.l3nny5.pkg.gimp</string>
+            <string>com.github.l3nny5.pkg.GIMP</string>
             <key>Input</key>
             <dict>
                   <key>NAME</key>
