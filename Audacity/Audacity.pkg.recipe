@@ -33,7 +33,7 @@
                         <dict>
                               <key>path_list</key>
                               <array>
-                                    <string>%PKG%</string>
+                                    <string>payload</string>
                               </array>
                         </dict>
                         <key>Processor</key>
