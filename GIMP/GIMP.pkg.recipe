@@ -3,7 +3,7 @@
 <plist version="1.0">
       <dict>
             <key>ParentRecipe</key>
-            <string>com.github.hansen-m.download.gimp</string>
+            <string>io.github.hjuutilainen.download.GIMP</string>
             <key>Description</key>
             <string>Downloads the latest version of GIMP from gimp.org and builds a pkg.</string>
             <key>Identifier</key>
@@ -17,6 +17,15 @@
             <string>0.4.0</string>
             <key>Process</key>
             <array>
+                  <dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>predicate</key>
+                              <string>download_changed == False</string>
+                        </dict>
+                        <key>Processor</key>
+                        <string>StopProcessingIf</string>
+                  </dict>
                   <dict>
                         <key>Processor</key>
                         <string>AppDmgVersioner</string>
