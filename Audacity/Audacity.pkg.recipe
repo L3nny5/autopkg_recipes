@@ -22,23 +22,77 @@
 			<dict>
 				<key>Arguments</key>
 				<dict>
-					<key>app_path</key>
-					<string>%PKG%/Audacity.app</string>
+					<key>dmg_path</key>
+					<string>%pathname%</string>
 				</dict>
 				<key>Processor</key>
-				<string>AppPkgCreator</string>
+				<string>AppDmgVersioner</string>
 			</dict>
 			<dict>
-                        <key>Arguments</key>
-                        <dict>
-                              <key>path_list</key>
-                              <array>
-                                    <string>%RECIPE_CACHE_DIR%/payload</string>
-                              </array>
-                        </dict>
-                        <key>Processor</key>
-                        <string>PathDeleter</string>
-                  </dict>
+				<key>Arguments</key>
+				<dict>
+					<key>pkgdirs</key>
+					<dict>
+						<key>Applications</key>
+						<string>0775</string>
+					</dict>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				</dict>
+				<key>Processor</key>
+				<string>PkgRootCreator</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>destination_path</key>
+					<string>%pkgroot%/Applications/%NAME%.app</string>
+					<key>source_path</key>
+					<string>%pathname%/%app_name%</string>
+				</dict>
+				<key>Processor</key>
+				<string>Copier</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_request</key>
+					<dict>
+						<key>chown</key>
+						<array>
+							<dict>
+								<key>group</key>
+								<string>admin</string>
+								<key>path</key>
+								<string>Applications</string>
+								<key>user</key>
+								<string>root</string>
+							</dict>
+						</array>
+						<key>id</key>
+						<string>%bundleid%</string>
+						<key>options</key>
+						<string>purge_ds_store</string>
+						<key>pkgname</key>
+						<string>%NAME%-%version%</string>
+						<key>version</key>
+						<string>%version%</string>
+					</dict>
+				</dict>
+				<key>Processor</key>
+				<string>PkgCreator</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>path_list</key>
+					<array>
+						<string>%pkgroot%</string>
+					</array>
+				</dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+			</dict>
 		</array>
 	</dict>
 </plist>
