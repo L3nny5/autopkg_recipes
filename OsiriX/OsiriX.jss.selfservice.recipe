@@ -22,11 +22,12 @@
 			<key>PKGINAME</key>
 			<string>OsiriX Lite</string>
 			<key>POLICY_TEMPLATE</key>
-			<string>PolicyTemplate-SelfService.xml</string>
+			<string>PolicyTemplate-OsiriX.xml</string>
 			<key>SELFSERVICE_CATEGORY</key>
 			<string>Graphic Editing</string>
 			<key>SELF_SERVICE_DESCRIPTION</key>
-			<string>OsiriX is an image processing application for Mac dedicated to DICOM images (".dcm" / ".DCM" extension) produced by equipment (MRI, CT, PET, PET-CT, ...). </string>
+			<string>OsiriX is an image processing application for Mac dedicated to DICOM images (".dcm" / ".DCM" extension) produced by equipment (MRI, CT, PET, PET-CT, ...).
+			ATTENTION: You may be asked to enter the email adress, which was used for downloading the OsriX Lite. Please enter support@aesthetics.mpg.de. Thank you! </string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 			<string>false</string>
 			<key>SELF_SERVICE_ICON</key>
