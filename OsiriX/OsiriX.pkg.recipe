@@ -27,6 +27,11 @@
 					<key>source_path</key>
 					<string>%PKG%/OsiriX Lite Installer.app/Contents/Resources/OsiriXLite.zip</string>
 				</dict>
+				<key>Processor</key>
+				<string>Copier</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
 				<dict>
 					<key>destination_path</key>
 					<string>%RECIPE_CACHE_DIR%/dmg/OsiriXQuickLookPlugin.qlgenerator.zip</string>
@@ -45,6 +50,19 @@
 					<string>%RECIPE_CACHE_DIR%/dmg/OsiriXLite.zip</string>
 					<key>purge_destination</key>
 					<true />
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%RECIPE_CACHE_DIR%/dmg/OsiriXQuickLookPlugin.qlgenerator.zip</string>
+					<key>purge_destination</key>
+					<false />
 					<key>destination_path</key>
 					<string>%RECIPE_CACHE_DIR%/unpack</string>
 				</dict>
