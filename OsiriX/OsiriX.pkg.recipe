@@ -25,22 +25,9 @@
 				<key>Arguments</key>
 				<dict>
 					<key>source_path</key>
-					<string>%PKG%/OsiriX Lite Installer.app/Contents/Resources/OsiriXLite.zip</string>
+					<string>%PKG%/OsiriX Lite Installer.app/Contents/Resources</string>
 					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/ZIP/OsiriXLite.zip</string>
-					<key>overwrite</key>
-					<true />
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>Copier</string>
-				<key>Arguments</key>
-				<dict>
-					<key>source_path</key>
-					<string>%PKG%/OsiriX Lite Installer.app/Contents/Resources/OsiriXQuickLookPlugin.qlgenerator.zip</string>
-					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/ZIP/OsiriXQuickLookPlugin.qlgenerator.zip</string>
+					<string>%RECIPE_CACHE_DIR%</string>
 					<key>overwrite</key>
 					<true />
 				</dict>
@@ -51,7 +38,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>archive_path</key>
-					<string>%RECIPE_CACHE_DIR%/ZIP/OsiriXLite.zip</string>
+					<string>%RECIPE_CACHE_DIR%/Resources/OsiriXLite.zip</string>
 					<key>purge_destination</key>
 					<true />
 					<key>destination_path</key>
@@ -64,7 +51,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>archive_path</key>
-					<string>%RECIPE_CACHE_DIR%/ZIP/OsiriXQuickLookPlugin.qlgenerator.zip</string>
+					<string>%RECIPE_CACHE_DIR%/Resources/OsiriXQuickLookPlugin.qlgenerator.zip</string>
 					<key>purge_destination</key>
 					<false />
 					<key>destination_path</key>
