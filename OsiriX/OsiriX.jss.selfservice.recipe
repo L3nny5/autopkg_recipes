@@ -4,7 +4,7 @@
 	<dict>
 		<key>Description</key>
 		<string>Creates PKG of OsiriX Lite (you have to download it first and put it into the folder), uploads it to the JSS and creates SelfService Policy.
-		use autopkg run -vv com.github.l3nny5.jss.selfservice.Audacity -p OsiriX_Lite.dmg to create it</string>
+		use autopkg run -vv com.github.l3nny5.jss.selfservice.OsiriX -p OsiriX_Lite.dmg to create it</string>
 		<key>Identifier</key>
 		<string>com.github.l3nny5.jss.selfservice.OsiriX</string>
 		<key>Input</key>
@@ -24,7 +24,7 @@
 			<key>POLICY_TEMPLATE</key>
 			<string>PolicyTemplate-SelfService.xml</string>
 			<key>SELFSERVICE_CATEGORY</key>
-			<string>Audio</string>
+			<string>Graphic Editing</string>
 			<key>SELF_SERVICE_DESCRIPTION</key>
 			<string>OsiriX is an image processing application for Mac dedicated to DICOM images (".dcm" / ".DCM" extension) produced by equipment (MRI, CT, PET, PET-CT, ...). </string>
 			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
