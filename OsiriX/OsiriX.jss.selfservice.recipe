@@ -41,7 +41,7 @@
 		<key>MinimumVersion</key>
 		<string>0.4.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.l3nny5.pkg.audacity</string>
+		<string>com.github.l3nny5.pkg.OsiriX</string>
 		<key>Process</key>
 		<array>
 			<dict>
