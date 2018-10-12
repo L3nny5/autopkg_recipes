@@ -77,7 +77,7 @@
 install_dir=$(dirname $0)
 
 # Install Logitech Options
-${install_dir}/"%app_name%/Contents/MacOS/osx-intel"
+${install_dir}/"%app_name%/Contents/MacOS/osx-x86_64"
 
 exit 0
                               </string>
