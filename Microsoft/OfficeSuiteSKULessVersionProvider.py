@@ -31,11 +31,14 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         "version": {
             "description": "Version of the latest SKU-Less Office 2016 Suite release.",
         },
+		"downloadurl":{
+			"description": "TEXT",
+		}
     }
     description = __doc__
 
     def get_version(self, FEED_URL):
-        """Parse the macadmins.software/latest.xml feed for the latest VL2016 version number"""
+        """Parse the macadmins.software/versions.xml feed for the latest O365 version number"""
         try:
             raw_xml = urllib2.urlopen(FEED_URL)
             xml = raw_xml.read()
@@ -48,9 +51,27 @@ class OfficeSuiteSKULessVersionProvider(Processor):
             version = vers.find('vl2016').text
         return version
 
+	def get_downlink(self, FEED_URL):
+      try:
+            raw_xml = urllib2.urlopen(FEED_URL)
+            xml = raw_xml.read()
+       except BaseException as e:
+            raise ProcessorError("Can't download %s: %s" % (FEED_URL, e))
+	   root = ET.fromstring(xml)
+       latest = root.find('latest')
+       for vers in root.iter('latest'):
+            package = vers.find('package')
+			for pack in vers.iter('package')
+			   if pack.find('id').text == 'com.microsoft.office.suite.2016':
+			       downurl = pack.find('download').text
+       return downurl
+
+
     def main(self):
         self.env["version"] = self.get_version(FEED_URL)
+		self.env["downloadurl"] = self.get_downlink(FEED_URL)
         self.output("Found Version Number %s" % self.env["version"])
+		self.output("Found Download URL %s" % self.env["downloadurl"])
 
 
 if __name__ == "__main__":
