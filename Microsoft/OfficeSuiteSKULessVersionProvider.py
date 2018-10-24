@@ -22,12 +22,15 @@ from autopkglib import Processor, ProcessorError
 
 __all__ = ["OfficeSuiteSKULessVersionProvider"]
 
-FEED_URL = "http://macadmins.software/latest.xml"
-
 
 class OfficeSuiteSKULessVersionProvider(Processor):
     """Provides the version of the latest SKU-Less Office 2016 Suite release"""
     input_variables = {
+        "feed_url": {
+            "required": True,
+            "description": (
+                "URL to parse")
+        },
         "versionid": {
             "required": True,
             "description": (
@@ -41,16 +44,18 @@ class OfficeSuiteSKULessVersionProvider(Processor):
     }
     output_variables = {
         "version": {
-            "description": "Version of the latest SKU-Less Office 2016 Suite release.",
+            "description": "Version of the latest SKU-Less Office release.",
         },
         "downloadurl": {
-            "description": "TEXT",
+            "description": "Output Download URL to use from FEED_URL",
         }
     }
     description = __doc__
 
+    FEED_URL = self.env["feed_url"]
+
     def get_version(self, FEED_URL):
-        """Parse the macadmins.software/versions.xml feed for the latest O365 version number"""
+        """Parse the FEED_URL feed for the latest version number"""
         try:
             raw_xml = urllib2.urlopen(FEED_URL)
             xml = raw_xml.read()

@@ -18,6 +18,8 @@
         <string>com.microsoft.office.suite.2016</string>
         <key>VERSIONER</key>
         <string>vl2016</string>
+        <key>FEED_URL</key>
+        <string>http://macadmins.software/latest.xml</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -28,6 +30,8 @@
             <string>OfficeSuiteSKULessVersionProvider</string>
             <key>Arguments</key>
             <dict>
+                  <key>feed_url</key>
+                  <string>%FEED_URL%</string>
                 <key>versionid</key>
                 <string>%ID%</string>
                 <key>versioner</key>
