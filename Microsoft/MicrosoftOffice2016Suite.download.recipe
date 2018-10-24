@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-    <key>Description</key>
-    <string>Downloads the latest Microsoft Office 2016 SKU-less installer package.</string>
-    <key>Identifier</key>
-    <string>com.github.l3nny5.download.MicrosoftOffice2016Suite</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Microsoft Office 2016</string>
-        <key>VENDOR</key>
-        <string>Microsoft</string>
-        <key>SOFTWARETITLE</key>
-        <string>Office2016</string>
-        <key>ID</key>
-        <string>com.microsoft.office.suite.2016</string>
-        <key>VERSIONER</key>
-        <string>vl2016</string>
-        <key>FEED_URL</key>
-        <string>http://macadmins.software/latest.xml</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>1.0.0</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>OfficeSuiteSKULessVersionProvider</string>
-            <key>Arguments</key>
-            <dict>
-                  <key>feed_url</key>
-                  <string>%FEED_URL%</string>
-                <key>versionid</key>
-                <string>%ID%</string>
-                <key>versioner</key>
-                <string>%VERSIONER%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%downloadurl%</string>
-                <key>filename</key>
-                <string>%VENDOR%%SOFTWARETITLE%-%version%.pkg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%</string>
-                <key>expected_authority_names</key>
-                <array>
-                    <string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
-                    <string>Developer ID Certification Authority</string>
-                    <string>Apple Root CA</string>
-                </array>
-            </dict>
-        </dict>
-    </array>
-</dict>
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest Microsoft Office 2016 SKU-less installer package.</string>
+		<key>Identifier</key>
+		<string>com.github.l3nny5.download.MicrosoftOffice2016Suite</string>
+		<key>Input</key>
+		<dict>
+			<key>FEED_URL</key>
+			<string>http://macadmins.software/latest.xml</string>
+			<key>ID</key>
+			<string>com.microsoft.office.suite.2016</string>
+			<key>NAME</key>
+			<string>Microsoft Office 2016</string>
+			<key>SOFTWARETITLE</key>
+			<string>Office2016</string>
+			<key>VENDOR</key>
+			<string>Microsoft</string>
+			<key>VERSIONER</key>
+			<string>vl2016</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>1.0.0</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>feed_url</key>
+					<string>%FEED_URL%</string>
+					<key>versioner</key>
+					<string>%VERSIONER%</string>
+					<key>versionid</key>
+					<string>%ID%</string>
+				</dict>
+				<key>Processor</key>
+				<string>OfficeSuiteSKULessVersionProvider</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%VENDOR%%SOFTWARETITLE%-%version%.pkg</string>
+					<key>url</key>
+					<string>%downloadurl%</string>
+				</dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>expected_authority_names</key>
+					<array>
+						<string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
+						<string>Developer ID Certification Authority</string>
+						<string>Apple Root CA</string>
+					</array>
+					<key>input_path</key>
+					<string>%pathname%</string>
+				</dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+			</dict>
+		</array>
+	</dict>
 </plist>
