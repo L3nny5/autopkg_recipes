@@ -52,19 +52,20 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         return version
 
 	def get_downlink(self, FEED_URL):
-      try:
+        try:
             raw_xml = urllib2.urlopen(FEED_URL)
             xml = raw_xml.read()
-       except BaseException as e:
+        except BaseException as e:
             raise ProcessorError("Can't download %s: %s" % (FEED_URL, e))
-	   root = ET.fromstring(xml)
-       latest = root.find('latest')
-       for vers in root.iter('latest'):
+
+        root = ET.fromstring(xml)
+        latest = root.find('latest')
+        for vers in root.iter('latest'):
             package = vers.find('package')
 			for pack in vers.iter('package')
 			   if pack.find('id').text == 'com.microsoft.office.suite.2016':
 			       downurl = pack.find('download').text
-       return downurl
+        return downurl
 
 
     def main(self):
