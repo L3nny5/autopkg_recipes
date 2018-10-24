@@ -52,8 +52,6 @@ class OfficeSuiteSKULessVersionProvider(Processor):
     }
     description = __doc__
 
-    FEED_URL = self.env["feed_url"]
-
     def get_version(self, FEED_URL):
         """Parse the FEED_URL feed for the latest version number"""
         try:
@@ -87,6 +85,7 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         return downurl
 
     def main(self):
+        FEED_URL = self.env["feed_url"]
         self.env["version"] = self.get_version(FEED_URL)
         self.env["downloadurl"] = self.get_downlink(FEED_URL)
         self.output("Found Version Number %s" % self.env["version"])
