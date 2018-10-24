@@ -15,7 +15,9 @@
         <key>SOFTWARETITLE</key>
         <string>Office2016</string>
         <key>ID</key>
-        <string>com.microsoft.office.suite.2016</string>  
+        <string>com.microsoft.office.suite.2016</string>
+        <key>VERSIONER</key>
+        <string>vl2016</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -28,6 +30,8 @@
             <dict>
                 <key>versionid</key>
                 <string>%ID%</string>
+                <key>versioner</key>
+                <string>%VERSIONER%</string>
             </dict>
         </dict>
         <dict>

@@ -33,6 +33,11 @@ class OfficeSuiteSKULessVersionProvider(Processor):
             "description": (
                 "ID of FEED_URL which product to download")
         },
+        "versioner": {
+            "required": True,
+            "description": (
+                "Version key of FEED_URL which product to use for versioner")
+        },
     }
     output_variables = {
         "version": {
@@ -54,8 +59,9 @@ class OfficeSuiteSKULessVersionProvider(Processor):
 
         root = ET.fromstring(xml)
         latest = root.find('latest')
+        versioner = self.env["versioner"]
         for vers in root.iter('latest'):
-            version = vers.find('vl2016').text
+            version = vers.find(versioner).text
         return version
 
     def get_downlink(self, FEED_URL):
