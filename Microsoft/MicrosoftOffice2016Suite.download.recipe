@@ -15,9 +15,7 @@
         <key>SOFTWARETITLE</key>
         <string>Office2016</string>
         <key>ID</key>
-        <string>871743</string>
-        <key>DOWNLOAD_URL_BASE</key>
-        <string>http://go.microsoft.com/fwlink/?linkid=</string>
+        <string>com.microsoft.office.suite.2016</string>  
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -26,6 +24,11 @@
         <dict>
             <key>Processor</key>
             <string>OfficeSuiteSKULessVersionProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>versionid</key>
+                <string>%ID%</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>

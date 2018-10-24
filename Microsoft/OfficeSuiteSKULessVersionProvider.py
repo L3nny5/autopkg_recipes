@@ -27,7 +27,13 @@ FEED_URL = "http://macadmins.software/latest.xml"
 
 class OfficeSuiteSKULessVersionProvider(Processor):
     """Provides the version of the latest SKU-Less Office 2016 Suite release"""
-    input_variables = {}
+    input_variables = {
+        "versionid": {
+            "required": True,
+            "description": (
+                "ID of FEED_URL which product to download")
+        },
+    }
     output_variables = {
         "version": {
             "description": "Version of the latest SKU-Less Office 2016 Suite release.",
@@ -61,10 +67,11 @@ class OfficeSuiteSKULessVersionProvider(Processor):
 
         root = ET.fromstring(xml)
         latest = root.find('latest')
+        versionid = self.env["versionid"]
         for vers in root.iter('latest'):
             package = vers.find('package')
             for pack in vers.iter('package'):
-                if pack.find('id').text == 'com.microsoft.office.suite.2016':
+                if pack.find('id').text == versionid:
                     downurl = pack.find('download').text
         return downurl
 
