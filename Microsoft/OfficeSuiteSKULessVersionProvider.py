@@ -63,7 +63,7 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         latest = root.find('latest')
         for vers in root.iter('latest'):
             package = vers.find('package')
-            for pack in vers.iter('package')
+            for pack in vers.iter('package'):
             if pack.find('id').text == 'com.microsoft.office.suite.2016':
                 downurl = pack.find('download').text
         return downurl
