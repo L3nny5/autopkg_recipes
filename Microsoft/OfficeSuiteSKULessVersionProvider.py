@@ -24,6 +24,7 @@ __all__ = ["OfficeSuiteSKULessVersionProvider"]
 
 FEED_URL = "http://macadmins.software/latest.xml"
 
+
 class OfficeSuiteSKULessVersionProvider(Processor):
     """Provides the version of the latest SKU-Less Office 2016 Suite release"""
     input_variables = {}
@@ -31,9 +32,9 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         "version": {
             "description": "Version of the latest SKU-Less Office 2016 Suite release.",
         },
-		"downloadurl":{
-			"description": "TEXT",
-		}
+        "downloadurl": {
+            "description": "TEXT",
+        }
     }
     description = __doc__
 
@@ -51,7 +52,7 @@ class OfficeSuiteSKULessVersionProvider(Processor):
             version = vers.find('vl2016').text
         return version
 
-	def get_downlink(self, FEED_URL):
+        def get_downlink(self, FEED_URL):
         try:
             raw_xml = urllib2.urlopen(FEED_URL)
             xml = raw_xml.read()
@@ -62,17 +63,16 @@ class OfficeSuiteSKULessVersionProvider(Processor):
         latest = root.find('latest')
         for vers in root.iter('latest'):
             package = vers.find('package')
-			for pack in vers.iter('package')
-			   if pack.find('id').text == 'com.microsoft.office.suite.2016':
-			       downurl = pack.find('download').text
+            for pack in vers.iter('package')
+            if pack.find('id').text == 'com.microsoft.office.suite.2016':
+                        downurl = pack.find('download').text
         return downurl
-
 
     def main(self):
         self.env["version"] = self.get_version(FEED_URL)
-		self.env["downloadurl"] = self.get_downlink(FEED_URL)
+        self.env["downloadurl"] = self.get_downlink(FEED_URL)
         self.output("Found Version Number %s" % self.env["version"])
-		self.output("Found Download URL %s" % self.env["downloadurl"])
+        self.output("Found Download URL %s" % self.env["downloadurl"])
 
 
 if __name__ == "__main__":
