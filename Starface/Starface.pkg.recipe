@@ -142,6 +142,18 @@ exit 0
 				<key>Processor</key>
 				<string>PkgCreator</string>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>path_list</key>
+					<array>
+						<string>%pkgroot%</string>
+						<string>%RECIPE_CACHE_DIR%/Scripts</string>
+					</array>
+				</dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+			</dict>
 		</array>
 	</dict>
 </plist>
