@@ -77,7 +77,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%found_filename%/Parallels/</string>
+				<string>%found_filename%/Parallels Desktop DMG/</string>
 				<key>source_path</key>
 				<string>%pkgroot%/Image/%NAME%-%MAJOR_VERSION%.dmg</string>
 			</dict>
@@ -100,7 +100,7 @@ admin_password_to_add_vm="on"
 admin_password_to_clone_vm="on"
 show_developers_menu="no"</string>
 				<key>file_path</key>
-				<string>%found_filename%/Parallels/deploy.cfg</string>
+				<string>%found_filename%/License Key and Configuration/deploy.cfg</string>
 			</dict>
 			<key>Processor</key>
 			<string>FileCreator</string>
