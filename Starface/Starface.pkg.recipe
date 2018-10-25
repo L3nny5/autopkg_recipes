@@ -70,7 +70,7 @@
 					<key>source_path</key>
 					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources/HelperFiles.pkg</string>
 					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
 					<key>overwrite</key>
 					<true />
 				</dict>
