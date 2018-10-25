@@ -10,15 +10,13 @@
 	<dict>
 		<key>LICENSE_KEY</key>
 		<string>XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX</string>
-		<key>MAJOR_VERSION</key>
-		<string>14</string>
 		<key>deploy_tool_url</key>
 		<string>https://download.parallels.com/desktop/tools/pd-autodeploy.zip</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.download.ParallelsDesktop</string>
+	<string>com.github.l3nny5.download.ParallelsDesktop</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -81,7 +79,7 @@
 				<key>destination_path</key>
 				<string>%found_filename%/Parallels/</string>
 				<key>source_path</key>
-				<string>%pkgroot%/Image/ParallelsDesktop-%MAJOR_VERSION%.dmg</string>
+				<string>%pkgroot%/Image/%NAME%-%MAJOR_VERSION%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
