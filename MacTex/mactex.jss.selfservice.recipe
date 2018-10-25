@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest version of MacTeX, creates PKG, uploads it to the JSS and creates SelfService Policy.</string>
+		<key>Identifier</key>
+		<string>com.github.l3nny5.jss.selfservice.MacTeX</string>
+		<key>Input</key>
+		<dict>
+			<key>CATEGORY</key>
+			<string>Apps</string>
+			<key>GROUP_NAME</key>
+			<string>SelfService%NAME%</string>
+			<key>PKGINAME</key>
+			<string>%NAME%</string>
+			<key>POLICY_TEMPLATE</key>
+			<string>PolicyTemplateMacTeX-SelfService.xml</string>
+			<key>SELFSERVICE_CATEGORY</key>
+			<string>Text Editing</string>
+			<key>SELF_SERVICE_DESCRIPTION</key>
+			<string>MacTeX is a product produced by the MacTeX TeXnical working group of the TeX Users Group (TUG). It is the Macintosh component of the TeX Collection DVD, the reference edition of TeX distributed by TeX User Groups across the world. The reference edition runs on Mac OS X, Windows, GNU/Linux, various BSD Unix systems, and most other computer architectures.</string>
+			<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
+			<string>false</string>
+			<key>SELF_SERVICE_ICON</key>
+			<string>tex.png</string>
+			<key>package_boot_volume_required</key>
+			<string>false</string>
+			<key>package_priority</key>
+			<string>10</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>0.4.0</string>
+		<key>ParentRecipe</key>
+		<string>com.github.l3nny5.download.MacTeX</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>category</key>
+					<string>%CATEGORY%</string>
+					<key>package_info</key>
+					<string>%PKGINAME% %version%</string>
+					<key>policy_template</key>
+					<string>%POLICY_TEMPLATE%</string>
+					<key>prod_name</key>
+					<string>%NAME%</string>
+					<key>self_service_description</key>
+					<string>%SELF_SERVICE_DESCRIPTION%</string>
+					<key>self_service_feature_mainpage</key>
+					<string>%SELF_SERVICE_FEATURE_MAINPAGE%</string>
+					<key>self_service_icon</key>
+					<string>%SELF_SERVICE_ICON%</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+				<key>Processor</key>
+				<string>JSSImporter</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
