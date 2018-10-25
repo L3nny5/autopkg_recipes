@@ -7,7 +7,7 @@
 
 			This recipe differs from the one in keeleysam-recipes because it offers code signature verification, does not require a ParallelsURLProvider processor, and also includes pkg and install recipes.</string>
 		<key>Identifier</key>
-		<string>com.github.l3nny5.download.ParallelsDesktop</string>
+		<string>com.github.l3nny5.download.ParallelsBusiness</string>
 		<key>Input</key>
 		<dict>
 			<key>MAJOR_VERSION</key>

@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.l3nny5.download.ParallelsDesktop</string>
+	<string>com.github.l3nny5.download.ParallelsBusiness</string>
 	<key>Process</key>
 	<array>
 		<dict>
