@@ -17,13 +17,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
+				<key>extract_root</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
+				<key>pkg_path</key>
 				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
+			<string>PkgExtractor</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
