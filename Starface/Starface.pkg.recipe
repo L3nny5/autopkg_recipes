@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Creates PKG of Starface (you have to download it first and put it into the folder)</string>
+		<key>Identifier</key>
+		<string>com.github.l3nny5.pkg.Starface</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Starface</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>0.51</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>PackageRequired</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>pkgdirs</key>
+					<dict>
+						<key>Applications</key>
+						<string>0775</string>
+					</dict>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				</dict>
+				<key>Processor</key>
+				<string>PkgRootCreator</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>purge_destination</key>
+					<true />
+					<key>destination_path</key>
+					<string>%pkgroot%/Applications</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>info_path</key>
+					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Info.plist</string>
+					<key>plist_keys</key>
+					<dict>
+						<key>CFBundleShortVersionString</key>
+						<string>version</string>
+						<key>CFBundleIdentifier</key>
+						<string>bundleid</string>
+					</dict>
+				</dict>
+				<key>Processor</key>
+				<string>PlistReader</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>Copier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>source_path</key>
+					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources/HelperFiles.pkg</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
+					<key>overwrite</key>
+					<true />
+				</dict>
+			</dict>
+			<dict>
+                        <key>Processor</key>
+                        <string>FileCreator</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>file_path</key>
+                              <string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+                              <key>file_mode</key>
+                              <string>0755</string>
+                              <key>file_content</key>
+                              <string>#!/bin/bash
+
+# Determine working directory
+install_dir=$(dirname $0)
+
+# Install Logitech Options
+/usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"HelperFiles.pkg" -target "$3"
+
+exit 0
+                              </string>
+                        </dict>
+                  </dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_request</key>
+					<dict>
+						<key>chown</key>
+						<array>
+							<dict>
+								<key>group</key>
+								<string>admin</string>
+								<key>path</key>
+								<string>Applications</string>
+								<key>user</key>
+								<string>root</string>
+							</dict>
+						</array>
+						<key>id</key>
+						<string>%bundleid%</string>
+						<key>options</key>
+						<string>purge_ds_store</string>
+						<key>pkgname</key>
+						<string>%NAME%-%version%</string>
+						<key>version</key>
+						<string>%version%</string>
+						<key>scripts</key>
+                                    <string>Scripts</string>
+						<key>pkgtype</key>
+                                    <string>flat</string>
+					</dict>
+				</dict>
+				<key>Processor</key>
+				<string>PkgCreator</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
