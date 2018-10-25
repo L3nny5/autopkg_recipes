@@ -4,7 +4,7 @@
 	<dict>
 		<key>Description</key>
 		<string>Creates PKG of Audacity (you have to download it first and put it into the folder), uploads it to the JSS and creates SelfService Policy.
-		use autopkg run -vv com.github.l3nny5.jss.selfservice.Audacity -p audacity-macos-2.3.0.dmg to create it</string>
+		use autopkg run -vv com.github.l3nny5.jss.selfservice.Audacity -p audacity-macos-*.dmg to create it</string>
 		<key>Identifier</key>
 		<string>com.github.l3nny5.jss.selfservice.Audacity</string>
 		<key>Input</key>
