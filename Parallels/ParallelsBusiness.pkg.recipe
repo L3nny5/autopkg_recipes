@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest ParallelsDesktop disk image and puts it together with a Deploy pkg including the License key.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.pkg.ParallelsDesktopDeploy</string>
+	<string>com.github.l3nny5.pkg.ParallelsBusiness</string>
 	<key>Input</key>
 	<dict>
 		<key>LICENSE_KEY</key>
