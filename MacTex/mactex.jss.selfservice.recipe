@@ -28,6 +28,8 @@
 			<string>false</string>
 			<key>package_priority</key>
 			<string>10</string>
+			<key>pkg_path</key>
+			<string>%pathname%</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.4.0</string>
