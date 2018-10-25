@@ -43,7 +43,7 @@ and share functionalities with the software “ownCloud Enterprise“. The servi
 		<key>MinimumVersion</key>
 		<string>0.4.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.l3nny5.pkg.AmazonMusic</string>
+		<string>com.github.l3nny5.pkg.ownCloudDesktopClient</string>
 		<key>Process</key>
 		<array>
 			<dict>
