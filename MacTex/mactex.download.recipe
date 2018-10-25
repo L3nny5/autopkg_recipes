@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>MacTeX</string>
+		<key>pkg_path</key>
+		<string>%pathname%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
