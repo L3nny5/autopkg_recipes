@@ -116,6 +116,17 @@ show_developers_menu="no"</string>
 			<key>Processor</key>
 			<string>PkgCopier</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
