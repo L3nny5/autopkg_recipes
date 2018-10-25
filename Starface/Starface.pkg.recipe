@@ -63,6 +63,30 @@
 				<string>PlistReader</string>
 			</dict>
 			<dict>
+				<key>Processor</key>
+				<string>Copier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>source_path</key>
+					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/Resources</string>
+					<key>overwrite</key>
+					<true />
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>FileMover</string>
+				<key>Arguments</key>
+				<dict>
+					<key>source</key>
+					<string>%RECIPE_CACHE_DIR%/Resources/HelperFiles.pkg</string>
+					<key>target</key>
+					<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
+				</dict>
+			</dict>
+			<dict>
                         <key>Processor</key>
                         <string>FileCreator</string>
                         <key>Arguments</key>
@@ -84,19 +108,6 @@ exit 0
                               </string>
                         </dict>
                   </dict>
-			<dict>
-				<key>Processor</key>
-				<string>Copier</string>
-				<key>Arguments</key>
-				<dict>
-					<key>source_path</key>
-					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources/HelperFiles.pkg</string>
-					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
-					<key>overwrite</key>
-					<true />
-				</dict>
-			</dict>
 			<dict>
 				<key>Arguments</key>
 				<dict>
