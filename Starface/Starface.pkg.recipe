@@ -38,6 +38,8 @@
 				<string>Unarchiver</string>
 				<key>Arguments</key>
 				<dict>
+					<key>archive_path</key>
+					<string>%PKG%</string>
 					<key>purge_destination</key>
 					<true />
 					<key>destination_path</key>
