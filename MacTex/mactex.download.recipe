@@ -35,6 +35,8 @@
 				<string>ftp://ftp.tu-chemnitz.de/pub/tex/systems/mac/mactex/MacTeX.pkg</string>
 				<key>filename</key>
 				<string>%NAME%-%version%.pkg</string>
+				<key>CHECK_FILESIZE_ONLY</key>
+				<true />
 			</dict>
 		</dict>
 		<dict>
