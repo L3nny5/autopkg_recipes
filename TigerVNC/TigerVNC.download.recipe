@@ -50,6 +50,26 @@
                 <string>https://bintray.com/%match%</string>
             </dict>
         </dict>
+	  <dict>
+		  <key>Arguments</key>
+		  <dict>
+			  <key>predicate</key>
+			  <string>download_changed == False</string>
+		  </dict>
+		  <key>Processor</key>
+		  <string>StopProcessingIf</string>
+	  </dict>
+	  <dict>
+		  <key>Arguments</key>
+		  <dict>
+			  <key>input_path</key>
+			  <string>%pathname%/TigerVNC*.app</string>
+			  <key>requirement</key>
+			  <string>anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = S5LX88A9BW</string>
+		  </dict>
+		  <key>Processor</key>
+		  <string>CodeSignatureVerifier</string>
+	  </dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
