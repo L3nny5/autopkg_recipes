@@ -33,13 +33,15 @@
 				<string>URLDownloader</string>
 			</dict>
 			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
-					<key>dmg_path</key>
-					<string>%pathname%</string>
+					<key>url</key>
+					<string>http://mcmc-jags.sourceforge.net</string>
+					<key>re_pattern</key>
+					<string>The latest release is JAGS (?P&lt;version&gt;.*)</string>
 				</dict>
-				<key>Processor</key>
-				<string>AppDmgVersioner</string>
 			</dict>
 			<dict>
 				<key>Processor</key>
