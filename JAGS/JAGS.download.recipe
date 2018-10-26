@@ -33,6 +33,15 @@
 				<string>URLDownloader</string>
 			</dict>
 			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>dmg_path</key>
+					<string>%filename%</string>
+				</dict>
+				<key>Processor</key>
+				<string>AppDmgVersioner</string>
+			</dict>
+			<dict>
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
 			</dict>
