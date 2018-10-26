@@ -1,52 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-	<dict>
-		<key>Description</key>
-		<string>Downloads the latest verison of JAGS</string>
-		<key>Identifier</key>
-		<string>com.github.l3nny5.download.JAGS</string>
-		<key>Input</key>
-		<dict>
-			<key>NAME</key>
-			<string>JAGS</string>
-		</dict>
-		<key>MinimumVersion</key>
-		<string>1.0.0</string>
-		<key>Process</key>
-		<array>
-			<dict>
-				<key>Processor</key>
-				<string>SourceForgeBestReleaseURLProvider</string>
-				<key>Arguments</key>
-				<dict>
-					<key>SOURCEFORGE_PROJECT_NAME</key>
-					<string>mcmc-jags</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>RemoteFilenameFinder</string>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>URLDownloader</string>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-					<key>url</key>
-					<string>http://mcmc-jags.sourceforge.net</string>
-					<key>re_pattern</key>
-					<string>The latest release is JAGS (?P&lt;version&gt;.*)</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>EndOfCheckPhase</string>
-			</dict>
-		</array>
-	</dict>
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of TigerVNC.</string>
+    <key>Identifier</key>
+    <string>com.github.l3nny5.download.TigerVNC</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>TigerVNC</string>
+        <key>DOWNLOADPAGE_URL</key>
+        <string>https://bintray.com/tigervnc/stable/tigervnc/_latestVersion</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%DOWNLOADPAGE_URL%</string>
+                <key>re_pattern</key>
+                <string>a href="(.+TigerVNC.*?\.dmg)\">TigerVNC</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://bintray.com/%match%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
 </plist>
