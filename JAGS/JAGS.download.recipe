@@ -40,7 +40,9 @@
 					<key>url</key>
 					<string>http://mcmc-jags.sourceforge.net</string>
 					<key>re_pattern</key>
-					<string>The latest release is JAGS (?P&lt;version&gt;[0-9\.]+)\.\s+.*</string>
+					<string>The latest release is JAGS ([0-9\.]+)\.</string>
+					<key>result_output_var_name</key>
+					<string>version</string>
 				</dict>
 			</dict>
 			<dict>
