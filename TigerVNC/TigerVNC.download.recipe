@@ -36,7 +36,7 @@
                 <key>url</key>
                 <string>%DOWNLOADPAGE_URL%</string>
                 <key>re_pattern</key>
-                <string>>(TigerVNC.*?\.dmg)<</string>
+                <string>&gt;(TigerVNC.*?\.dmg)&lt;</string>
 		    <key>result_output_var_name</key>
                 <string>filename</string>
             </dict>
