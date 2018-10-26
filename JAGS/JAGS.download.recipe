@@ -32,7 +32,7 @@
 				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>CHECK_FILESIZE_ONLY</key>
-				<true />
+				<string>true</string>
 			</dict>
 			<dict>
 				<key>Processor</key>
