@@ -5,7 +5,7 @@
 		<key>Description</key>
 		<string>Downloads the latest version of Anaconda, uploads it to the JSS and creates SelfService Policy.</string>
 		<key>Identifier</key>
-		<string>n</string>
+		<string>com.github.l3nny5.jss.selfservice.Anaconda</string>
 		<key>Input</key>
 		<dict>
 			<key>CATEGORY</key>
