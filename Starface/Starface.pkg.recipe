@@ -1,103 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Creates PKG of Starface (you have to download it first and put it into the folder)</string>
+	<key>Identifier</key>
+	<string>com.github.l3nny5.pkg.Starface</string>
+	<key>Input</key>
 	<dict>
-		<key>Description</key>
-		<string>Creates PKG of Starface (you have to download it first and put it into the folder)</string>
-		<key>Identifier</key>
-		<string>com.github.l3nny5.pkg.Starface</string>
-		<key>Input</key>
+		<key>NAME</key>
+		<string>Starface</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.51</string>
+	<key>Process</key>
+	<array>
 		<dict>
-			<key>NAME</key>
-			<string>Starface</string>
+			<key>Processor</key>
+			<string>PackageRequired</string>
 		</dict>
-		<key>MinimumVersion</key>
-		<string>0.51</string>
-		<key>Process</key>
-		<array>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Processor</key>
-				<string>PackageRequired</string>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts</string>
 			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Arguments</key>
+				<key>pkgdirs</key>
 				<dict>
-					<key>pkgdirs</key>
-					<dict>
-					</dict>
-					<key>pkgroot</key>
-					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+					<key>Applications</key>
+					<string>0775</string>
 				</dict>
-				<key>Processor</key>
-				<string>PkgRootCreator</string>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>pkgdirs</key>
-					<dict>
-						<key>Applications</key>
-						<string>0775</string>
-					</dict>
-					<key>pkgroot</key>
-					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				</dict>
-				<key>Processor</key>
-				<string>PkgRootCreator</string>
+				<key>archive_path</key>
+				<string>%PKG%</string>
+				<key>destination_path</key>
+				<string>%pkgroot%/Applications</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Processor</key>
-				<string>Unarchiver</string>
-				<key>Arguments</key>
+				<key>info_path</key>
+				<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Info.plist</string>
+				<key>plist_keys</key>
 				<dict>
-					<key>archive_path</key>
-					<string>%PKG%</string>
-					<key>purge_destination</key>
-					<true />
-					<key>destination_path</key>
-					<string>%pkgroot%/Applications</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>info_path</key>
-					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Info.plist</string>
-					<key>plist_keys</key>
-					<dict>
-						<key>CFBundleShortVersionString</key>
-						<string>version</string>
-						<key>CFBundleIdentifier</key>
-						<string>bundleid</string>
-					</dict>
-				</dict>
-				<key>Processor</key>
-				<string>PlistReader</string>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>Copier</string>
-				<key>Arguments</key>
-				<dict>
-					<key>source_path</key>
-					<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources/HelperFiles.pkg</string>
-					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
-					<key>overwrite</key>
-					<true />
+					<key>CFBundleIdentifier</key>
+					<string>bundleid</string>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
 				</dict>
 			</dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-                        <key>Processor</key>
-                        <string>FileCreator</string>
-                        <key>Arguments</key>
-                        <dict>
-                              <key>file_path</key>
-                              <string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
-                              <key>file_mode</key>
-                              <string>0755</string>
-                              <key>file_content</key>
-                              <string>#!/bin/bash
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/HelperFiles.pkg</string>
+				<key>overwrite</key>
+				<true/>
+				<key>source_path</key>
+				<string>%pkgroot%/Applications/STARFACE UCC Client.app/Contents/Resources/HelperFiles.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>file_content</key>
+				<string>#!/bin/bash
 
 # Determine working directory
 install_dir=$(dirname $0)
@@ -107,53 +100,59 @@ install_dir=$(dirname $0)
 
 exit 0
                               </string>
-                        </dict>
-                  </dict>
-			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>pkg_request</key>
-					<dict>
-						<key>chown</key>
-						<array>
-							<dict>
-								<key>group</key>
-								<string>admin</string>
-								<key>path</key>
-								<string>Applications</string>
-								<key>user</key>
-								<string>root</string>
-							</dict>
-						</array>
-						<key>id</key>
-						<string>%bundleid%</string>
-						<key>options</key>
-						<string>purge_ds_store</string>
-						<key>pkgname</key>
-						<string>%NAME%-%version%</string>
-						<key>version</key>
-						<string>%version%</string>
-						<key>scripts</key>
-                                    <string>Scripts</string>
-						<key>pkgtype</key>
-                                    <string>flat</string>
-					</dict>
-				</dict>
-				<key>Processor</key>
-				<string>PkgCreator</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
 			</dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Arguments</key>
+				<key>pkg_request</key>
 				<dict>
-					<key>path_list</key>
+					<key>chown</key>
 					<array>
-						<string>%pkgroot%</string>
-						<string>%RECIPE_CACHE_DIR%/Scripts</string>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
 					</array>
+					<key>id</key>
+					<string>%bundleid%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>pkgtype</key>
+					<string>flat</string>
+					<key>scripts</key>
+					<string>Scripts</string>
+					<key>version</key>
+					<string>%version%</string>
 				</dict>
-				<key>Processor</key>
-				<string>PathDeleter</string>
 			</dict>
-		</array>
-	</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%pkgroot%</string>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+		</dict>
+	</array>
+</dict>
 </plist>

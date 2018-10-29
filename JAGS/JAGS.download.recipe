@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest verison of JAGS</string>
+	<key>Identifier</key>
+	<string>com.github.l3nny5.download.JAGS</string>
+	<key>Input</key>
 	<dict>
-		<key>Description</key>
-		<string>Downloads the latest verison of JAGS</string>
-		<key>Identifier</key>
-		<string>com.github.l3nny5.download.JAGS</string>
-		<key>Input</key>
-		<dict>
-			<key>NAME</key>
-			<string>JAGS</string>
-		</dict>
-		<key>MinimumVersion</key>
-		<string>1.0.0</string>
-		<key>Process</key>
-		<array>
-			<dict>
-				<key>Processor</key>
-				<string>SourceForgeBestReleaseURLProvider</string>
-				<key>Arguments</key>
-				<dict>
-					<key>SOURCEFORGE_PROJECT_NAME</key>
-					<string>mcmc-jags</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>RemoteFilenameFinder</string>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>URLDownloader</string>
-				<key>Arguments</key>
-				<dict>
-					<key>CHECK_FILESIZE_ONLY</key>
-					<true />
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-					<key>url</key>
-					<string>http://mcmc-jags.sourceforge.net</string>
-					<key>re_pattern</key>
-					<string>The latest release is JAGS ([0-9\.]+)\.</string>
-					<key>result_output_var_name</key>
-					<string>version</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>predicate</key>
-					<string>download_changed == False</string>
-				</dict>
-				<key>Processor</key>
-				<string>StopProcessingIf</string>
-			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>EndOfCheckPhase</string>
-			</dict>
-		</array>
+		<key>NAME</key>
+		<string>JAGS</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>SOURCEFORGE_PROJECT_NAME</key>
+				<string>mcmc-jags</string>
+			</dict>
+			<key>Processor</key>
+			<string>SourceForgeBestReleaseURLProvider</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>RemoteFilenameFinder</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>CHECK_FILESIZE_ONLY</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>The latest release is JAGS ([0-9\.]+)\.</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
+				<key>url</key>
+				<string>http://mcmc-jags.sourceforge.net</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>download_changed == False</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
 </plist>
