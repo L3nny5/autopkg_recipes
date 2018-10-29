@@ -5,7 +5,7 @@
 		<key>Description</key>
 		<string>Downloads the latest version of Anaconda, uploads it to the JSS and creates SelfService Policy.</string>
 		<key>Identifier</key>
-		<string>com.github.l3nny5.jss.selfservice.Anaconda</string>
+		<string>n</string>
 		<key>Input</key>
 		<dict>
 			<key>CATEGORY</key>
@@ -33,18 +33,18 @@
 		<string>1.0.0</string>
 		<key>ParentRecipe</key>
 		<string>com.github.hansen-m.download.Anaconda</string>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>download_changed == False</string>
-			</dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-		</dict>
 		<key>Process</key>
 		<array>
 			<dict>
+				<dict>
+					<key>Arguments</key>
+					<dict>
+						<key>predicate</key>
+						<string>download_changed == False</string>
+					</dict>
+					<key>Processor</key>
+					<string>StopProcessingIf</string>
+				</dict>
 				<key>Arguments</key>
 				<dict>
 					<key>category</key>
