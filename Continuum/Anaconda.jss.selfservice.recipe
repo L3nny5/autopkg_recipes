@@ -10,8 +10,6 @@
 		<dict>
 			<key>CATEGORY</key>
 			<string>Apps</string>
-			<key>GROUP_NAME</key>
-			<string>SelfService%NAME%%PYTHON_MAJOR_VERSION%</string>
 			<key>PKGINAME</key>
 			<string>%NAME%</string>
 			<key>POLICY_TEMPLATE</key>

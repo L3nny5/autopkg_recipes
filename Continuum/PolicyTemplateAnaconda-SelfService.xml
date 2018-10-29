@@ -1,6 +1,6 @@
 <policy>
 	<general>
-		<name>SelfService%PROD_NAME%</name>
+		<name>SelfService%PROD_NAME%%PYTHON_MAJOR_VERSION%</name>
 		<enabled>true</enabled>
 		<frequency>Ongoing</frequency>
 	</general>
