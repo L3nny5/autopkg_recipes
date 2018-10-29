@@ -11,7 +11,7 @@
 			<key>CATEGORY</key>
 			<string>Apps</string>
 			<key>GROUP_NAME</key>
-			<string>SelfService%NAME%</string>
+			<string>SelfService%NAME%%PYTHON_MAJOR_VERSION%</string>
 			<key>PKGINAME</key>
 			<string>%NAME%</string>
 			<key>POLICY_TEMPLATE</key>
@@ -33,6 +33,15 @@
 		<string>1.0.0</string>
 		<key>ParentRecipe</key>
 		<string>com.github.hansen-m.download.Anaconda</string>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>download_changed == False</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
 		<key>Process</key>
 		<array>
 			<dict>
