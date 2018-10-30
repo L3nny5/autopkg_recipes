@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OpenJDK 11</string>
+        <string>OpenJDK</string>
         <key>VENDOR</key>
         <string>OpenJDK</string>
         <key>SOFTWARETITLE</key>
