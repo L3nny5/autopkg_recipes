@@ -9,4 +9,5 @@
 			<search_type>is not</search_type>
 			<value>%VERSION%</value>
 		</criterion>
+	</criteria>
 </computer_group>
