@@ -6,11 +6,11 @@ install_dir=$(dirname $0)
 # Distribute the script if Firefox is already installed
 if [ -d "$3/Applications/Firefox.app/Contents/Resources" ]; then
 
-# Copy the autoconfig.js
-cp ${install_dir}/"autoconfig.js" "$3/Applications/Firefox.app/Contents/Resources/defaults/pref"
+# Copy policies.json
+mkdir "$3/Applications/Firefox.app/Contents/Resources/distribution/"
 
-# Copy the mozilla.cfg file
-cp ${install_dir}/"mozilla.cfg" "$3/Applications/Firefox.app/Contents/Resources/"
+# Copy policies.json
+cp ${install_dir}/"autoconfig.js" "$3/Applications/Firefox.app/Contents/Resources/distribution/"
 
 fi
 

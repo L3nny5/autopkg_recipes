@@ -1,0 +1,20 @@
+{
+  "policies": {
+    "Bookmarks": [
+      {
+        "Favicon": "https://sharepoint.mpg.de/institute/aesthetics/SitePages/favicon.ico",
+        "Placement": "toolbar",
+        "Title": "Intranet - Sharepoint",
+        "URL": "https://sharepoint.mpg.de/institute/aesthetics/SitePages/Homepage.aspx"
+      },
+      {
+        "Favicon": "https://www.ae.mpg.de/favicon.ico",
+        "Placement": "toolbar",
+        "Title": "Website - MPI",
+        "URL": "https://www.ae.mpg.de/"
+      }
+    ],
+    "DisableAppUpdate": true,
+    "DisplayBookmarksToolbar": true
+  }
+}
