@@ -6,7 +6,7 @@ install_dir=$(dirname $0)
 # Distribute the script if Firefox is already installed
 if [ -d "$3/Applications/Firefox.app/Contents/Resources" ]; then
 
-# Copy policies.json
+# Create distribution directory
 mkdir "$3/Applications/Firefox.app/Contents/Resources/distribution/"
 
 # Copy policies.json
