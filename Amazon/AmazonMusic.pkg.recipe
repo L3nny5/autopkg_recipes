@@ -16,18 +16,9 @@
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.AmazonMusic</string>
+	<string>com.github.l3nny5.download.AmazonMusic</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>download_changed == False</string>
-			</dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
