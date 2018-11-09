@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Amazon Music</string>
         <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Safari/602.1.50</string>
+        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15</string>
         <key>SEARCH_URL</key>
         <string>https://www.amazon.com/gp/dmusic/desktop/downloadPlayer/</string>
         <key>SEARCH_PATTERN</key>
