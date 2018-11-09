@@ -10,7 +10,7 @@ if [ -d "$3/Applications/Firefox.app/Contents/Resources" ]; then
 mkdir "$3/Applications/Firefox.app/Contents/Resources/distribution/"
 
 # Copy policies.json
-cp ${install_dir}/"autoconfig.js" "$3/Applications/Firefox.app/Contents/Resources/distribution/"
+cp ${install_dir}/"policies.json" "$3/Applications/Firefox.app/Contents/Resources/distribution/"
 
 fi
 
