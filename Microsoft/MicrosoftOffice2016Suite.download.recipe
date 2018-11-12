@@ -18,8 +18,6 @@
 		<string>Office2016</string>
 		<key>VENDOR</key>
 		<string>Microsoft</string>
-		<key>VERSIONER</key>
-		<string>vl2016</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
