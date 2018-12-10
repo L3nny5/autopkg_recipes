@@ -10,24 +10,24 @@
 	<dict>
 		<key>CATEGORY</key>
 		<string>Apps</string>
-		<key>GROUP_NAME_SELFSERVICE</key>
-		<string>SelfService%NAME%</string>
-		<key>GROUP_TEMPLATE_SELFSERVICE</key>
-		<string>SmartGroupTemplate-SelfService.xml</string>
 		<key>GROUP_NAME_PATCHOO</key>
 		<string>update%NAME%</string>
+		<key>GROUP_NAME_SELFSERVICE</key>
+		<string>SelfService%NAME%</string>
 		<key>GROUP_TEMPLATE_PATCHOO</key>
 		<string>SmartGroupTemplate-patchoo.xml</string>
+		<key>GROUP_TEMPLATE_SELFSERVICE</key>
+		<string>SmartGroupTemplate-SelfService.xml</string>
 		<key>NAME</key>
 		<string>Atom</string>
 		<key>PKGINAME</key>
 		<string>Atom</string>
-		<key>POLICY_TEMPLATE_SELFSERVICE</key>
-		<string>PolicyTemplate-SelfService.xml</string>
-		<key>POLICY_TEMPLATE_PATCHOO</key>
-		<string>PolicyTemplate-patchoo.xml</string>
 		<key>POLICY_CATEGORY</key>
 		<string>0-patchoo-dev</string>
+		<key>POLICY_TEMPLATE_PATCHOO</key>
+		<string>PolicyTemplate-patchoo.xml</string>
+		<key>POLICY_TEMPLATE_SELFSERVICE</key>
+		<string>PolicyTemplate-SelfService.xml</string>
 		<key>SELFSERVICE_CATEGORY</key>
 		<string>Text Editing</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
@@ -76,6 +76,8 @@
 				</array>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Cache</string>
 				<key>policy_category</key>
 				<string>%POLICY_CATEGORY%</string>
 				<key>policy_template</key>
@@ -84,8 +86,6 @@
 				<string>%NAME%</string>
 				<key>version</key>
 				<string>%version%</string>
-				<key>policy_action_type</key>
-				<string>Cache</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
@@ -108,6 +108,8 @@
 				</array>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE_SELFSERVICE%</string>
 				<key>prod_name</key>
@@ -120,8 +122,6 @@
 				<string>%SELF_SERVICE_ICON%</string>
 				<key>version</key>
 				<string>%version%</string>
-				<key>policy_action_type</key>
-				<string>Install</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
