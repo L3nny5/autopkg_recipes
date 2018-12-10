@@ -10,8 +10,6 @@
 	<dict>
 		<key>CATEGORY</key>
 		<string>Apps</string>
-		<key>DESCRIPTION</key>
-		<string>Cyberduck is a open-source and easy to use FTP/FTP-TLS/SFTP browser for the Mac.</string>
 		<key>GROUP_NAME_PATCHOO</key>
 		<string>update%NAME%</string>
 		<key>GROUP_NAME_SELFSERVICE</key>
@@ -20,8 +18,6 @@
 		<string>SmartGroupTemplate-patchoo.xml</string>
 		<key>GROUP_TEMPLATE_SELFSERVICE</key>
 		<string>SmartGroupTemplate-SelfService.xml</string>
-		<key>ICON</key>
-		<string>%RECIPE_DIR%/Cyberduck.png</string>
 		<key>NAME</key>
 		<string>Cyberduck</string>
 		<key>PKGINAME</key>
@@ -34,8 +30,12 @@
 		<string>PolicyTemplate-SelfService.xml</string>
 		<key>SELFSERVICE_CATEGORY</key>
 		<string>Data Management</string>
+		<key>SELF_SERVICE_DESCRIPTION</key>
+		<string>Cyberduck is a open-source and easy to use FTP/FTP-TLS/SFTP browser for the Mac.</string>
 		<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
 		<string>false</string>
+		<key>SELF_SERVICE_ICON</key>
+		<string>%RECIPE_DIR%/Cyberduck.png</string>
 		<key>package_boot_volume_required</key>
 		<string>False</string>
 		<key>package_priority</key>
