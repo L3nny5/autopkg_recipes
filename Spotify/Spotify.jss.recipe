@@ -5,14 +5,18 @@
 	<key>Description</key>
 	<string>Downloads the latest Spotify dmg and creates a pkg from it. Then, uploads to the JSS and creates SelfService Policy.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.selfservice.Spotify</string>
+	<string>com.github.l3nny5.jss.Spotify</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
 		<string>Apps</string>
-		<key>GROUP_NAME</key>
+		<key>GROUP_NAME_PATCHOO</key>
+		<string>update%NAME%</string>
+		<key>GROUP_NAME_SELFSERVICE</key>
 		<string>SelfService%NAME%</string>
-		<key>GROUP_TEMPLATE</key>
+		<key>GROUP_TEMPLATE_PATCHOO</key>
+		<string>SmartGroupTemplate-patchoo.xml</string>
+		<key>GROUP_TEMPLATE_SELFSERVICE</key>
 		<string>SmartGroupTemplate-SelfService.xml</string>
 		<key>JSS_INVENTORY_NAME</key>
 		<string>Spotify.app</string>
@@ -20,7 +24,11 @@
 		<string>Spotify</string>
 		<key>PKGINAME</key>
 		<string>Spotify</string>
-		<key>POLICY_TEMPLATE</key>
+		<key>POLICY_CATEGORY</key>
+		<string>0-patchoo-dev</string>
+		<key>POLICY_TEMPLATE_PATCHOO</key>
+		<string>PolicyTemplate-patchoo.xml</string>
+		<key>POLICY_TEMPLATE_SELFSERVICE</key>
 		<string>PolicyTemplate-SelfService.xml</string>
 		<key>SELFSERVICE_CATEGORY</key>
 		<string>Audio</string>
@@ -52,17 +60,53 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>%GROUP_NAME%</string>
+						<string>%GROUP_NAME_PATCHOO%</string>
 						<key>smart</key>
 						<true/>
 						<key>template_path</key>
-						<string>%GROUP_TEMPLATE%</string>
+						<string>%GROUP_TEMPLATE_PATCHOO%</string>
+					</dict>
+				</array>
+				<key>jss_inventory_name</key>
+				<string>%JSS_INVENTORY_NAME%</string>
+				<key>package_info</key>
+				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Cache</string>
+				<key>policy_category</key>
+				<string>%POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%POLICY_TEMPLATE_PATCHOO%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>%GROUP_NAME_SELFSERVICE%</string>
+						<key>smart</key>
+						<true/>
+						<key>template_path</key>
+						<string>%GROUP_TEMPLATE_SELFSERVICE%</string>
 					</dict>
 				</array>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
 				<key>policy_template</key>
-				<string>%POLICY_TEMPLATE%</string>
+				<string>%POLICY_TEMPLATE_SELFSERVICE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
 				<key>self_service_description</key>
