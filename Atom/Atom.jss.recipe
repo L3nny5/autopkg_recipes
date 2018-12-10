@@ -120,6 +120,8 @@
 				<string>%SELF_SERVICE_ICON%</string>
 				<key>version</key>
 				<string>%version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
