@@ -26,7 +26,11 @@
 		<string>Cyberduck</string>
 		<key>PKGINAME</key>
 		<string>Cyberduck</string>
-		<key>POLICY_TEMPLATE</key>
+		<key>POLICY_CATEGORY</key>
+		<string>0-patchoo-dev</string>
+		<key>POLICY_TEMPLATE_PATCHOO</key>
+		<string>PolicyTemplate-patchoo.xml</string>
+		<key>POLICY_TEMPLATE_SELFSERVICE</key>
 		<string>PolicyTemplate-SelfService.xml</string>
 		<key>SELFSERVICE_CATEGORY</key>
 		<string>Data Management</string>
