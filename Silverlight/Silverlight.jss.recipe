@@ -74,8 +74,6 @@
 						<string>%GROUP_TEMPLATE_PATCHOO%</string>
 					</dict>
 				</array>
-				<key>jss_inventory_name</key>
-				<string>%JSS_INVENTORY_NAME%</string>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
 				<key>policy_action_type</key>

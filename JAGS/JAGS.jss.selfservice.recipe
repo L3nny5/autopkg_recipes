@@ -20,6 +20,8 @@
 		<string>PolicyTemplate-SelfService.xml</string>
 		<key>SELFSERVICE_CATEGORY</key>
 		<string>Programming</string>
+		<key>SELF_SERVICE_FEATURE_MAINPAGE</key>
+		<string>false</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS.  JAGS was written with three aims in mind:
 -To have a cross-platform engine for the BUGS language

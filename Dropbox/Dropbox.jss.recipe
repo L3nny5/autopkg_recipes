@@ -120,6 +120,8 @@
 				<string>%NAME%</string>
 				<key>self_service_description</key>
 				<string>%DESCRIPTION%</string>
+				<key>self_service_feature_mainpage</key>
+				<string>%SELF_SERVICE_FEATURE_MAINPAGE%</string>
 				<key>self_service_icon</key>
 				<string>%ICON%</string>
 				<key>version</key>

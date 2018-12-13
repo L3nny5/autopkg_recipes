@@ -62,6 +62,8 @@ ATTENTION: You may be asked to enter the email adress, which was used for downlo
 						<string>%GROUP_TEMPLATE%</string>
 					</dict>
 				</array>
+				<key>jss_inventory_name</key>
+				<string>%JSS_INVENTORY_NAME%</string>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
 				<key>policy_template</key>

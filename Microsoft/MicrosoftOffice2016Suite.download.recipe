@@ -28,8 +28,6 @@
 			<dict>
 				<key>feed_url</key>
 				<string>%FEED_URL%</string>
-				<key>versioner</key>
-				<string>%VERSIONER%</string>
 				<key>versionid</key>
 				<string>%ID%</string>
 			</dict>
