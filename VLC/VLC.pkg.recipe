@@ -27,80 +27,20 @@
 			<string>AppDmgVersioner</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/VLC.app</string>
-				<key>source_path</key>
-				<string>%pathname%/VLC.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>infofile</key>
-				<string>%RECIPE_CACHE_DIR%/PackageInfo</string>
-				<key>pkgtype</key>
-				<string>flat</string>
-				<key>template_path</key>
-				<string>PackageInfoTemplate</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgInfoCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_request</key>
-				<dict>
-					<key>chown</key>
-					<array>
-						<dict>
-							<key>group</key>
-							<string>admin</string>
-							<key>path</key>
-							<string>Applications</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
-					</array>
-					<key>id</key>
-					<string>org.videolan.vlc.pkg</string>
-					<key>options</key>
-					<string>purge_ds_store</string>
-					<key>pkgdir</key>
-					<string>%RECIPE_CACHE_DIR%</string>
-					<key>resources</key>
-					<string>Resources</string>
-				</dict>
-				<key>pkgname</key>
-				<string>%NAME%-%version%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
 				<array>
-					<string>%pkgroot%</string>
+					<string>%RECIPE_CACHE_DIR%/payload</string>
 				</array>
 			</dict>
 			<key>Processor</key>
