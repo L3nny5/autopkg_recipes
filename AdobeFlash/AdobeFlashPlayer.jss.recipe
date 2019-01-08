@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads Adobe Flash Player installer and extracts the embedded package, uploads to JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.patchoo.AdobeFlashPlayer</string>
+	<string>com.github.l3nny5.jss.AdobeFlashPlayer</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -24,10 +24,12 @@
 		<string>PolicyTemplate-patchoo.xml</string>
 		<key>package_boot_volume_required</key>
 		<string>True</string>
-		<key>package_priority</key>
-		<string>10</string>
-		<key>policy_action_type</key>
-		<string>Cache</string>
+		<key>THIN_PROV_POLICY_TEMPLATE</key>
+		<string>PolicyTemplate-ThinProv.xml</string>
+		<key>THIN_PROV_POLICY_NAME</key>
+		<string>10-Install%NAME%</string>
+		<key>THIN_PROV_POLICY_CATEGORY</key>
+		<string>4-Thin-Provisioning</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
@@ -62,12 +64,35 @@
 				</array>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Cache</string>
 				<key>policy_category</key>
 				<string>%POLICY_CATEGORY%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>package_info</key>
+				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
+				<key>thin_prov_policy_category</key>
+				<string>%THIN_PROV_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%THIN_PROV_POLICY_TEMPLATE%</string>
+				<key>thin_prov_policy_name</key>
+				<string>%THIN_PROV_POLICY_NAME%</string>
 				<key>version</key>
 				<string>%version%</string>
 			</dict>
