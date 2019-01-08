@@ -23,15 +23,6 @@
 			<key>Processor</key>
 			<string>StopProcessingIf</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>source_pkg</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgCopier</string>
-		</dict>
 	</array>
 </dict>
 </plist>
