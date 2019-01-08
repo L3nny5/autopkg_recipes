@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Uses parent pkg recipe to download latest Firefox, import it into the JSS and creates Patchoo Policy.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.patchoo.Firefox</string>
+	<string>com.github.l3nny5.jss.Firefox</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
