@@ -34,6 +34,10 @@
 				<name>MicrosoftOffice2016Serializer-2.0.pkg</name>
 				<action>Install</action>
 			</package>
+			<package>
+				<name>Disable-Office2016-First-Run-Dialog-Windows-1.1.pkg</name>
+				<action>Install</action>
+			</package>
 		</packages>
 		<!--Package added by JSSImporter-->
 	</package_configuration>
