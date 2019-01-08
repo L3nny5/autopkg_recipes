@@ -1,0 +1,43 @@
+<policy>
+	<general>
+		<name>%THIN_PROV_POLICY_NAME%</name>
+		<enabled>true</enabled>
+		<trigger>EVENT</trigger>
+		<trigger_other>ThinProv-%NAME%</trigger_other>
+		<frequency>Ongoing</frequency>
+		<category>
+			<name>%THIN_PROV_POLICY_CATEGORY%</name>
+		</category>
+		<network_limitations>
+			<network_segments>
+				<network_segment>
+					<id>8</id>
+					<name>PXE</name>
+				</network_segment>
+			</network_segments>
+		</network_limitations>
+	</general>
+	<scope>
+		<all_computers>true</all_computers>
+		<limitations>
+			<network_segments>
+				<network_segment>
+					<id>8</id>
+					<name>PXE</name>
+				</network_segment>
+			</network_segments>
+		</limitations>
+	</scope>
+	<package_configuration>
+		<!--Package added by JSSImporter-->
+	</package_configuration>
+	<scripts>
+		<!--Scripts added by JSSImporter-->
+	</scripts>
+	<self_service>
+		<!--Scripts added by JSSImporter-->
+	</self_service>
+	<maintenance>
+		<recon>false</recon>
+	</maintenance>
+</policy>
