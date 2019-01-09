@@ -27,7 +27,7 @@
 		<key>THIN_PROV_POLICY_TEMPLATE</key>
 		<string>PolicyTemplate-ThinProv.xml</string>
 		<key>THIN_PROV_POLICY_NAME</key>
-		<string>13-Install%NAME%</string>
+		<string>14-Install%NAME%</string>
 		<key>THIN_PROV_POLICY_CATEGORY</key>
 		<string>4-Thin-Provisioning</string>
 		<key>version</key>
