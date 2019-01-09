@@ -89,8 +89,6 @@
 				<string>%CATEGORY%</string>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
 				<key>policy_action_type</key>
 				<string>Install</string>
 				<key>thin_prov_policy_category</key>
