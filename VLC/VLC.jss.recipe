@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest VLC disk image, and builds a package, uploads to the JSS and creates Patchoo Policy.</string>
 	<key>Identifier</key>
-	<string>com.github.l3nny5.jss.patchoo.VLC</string>
+	<string>com.github.l3nny5.jss.VLC</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -24,10 +24,12 @@
 		<string>PolicyTemplate-patchoo.xml</string>
 		<key>package_boot_volume_required</key>
 		<string>true</string>
-		<key>package_priority</key>
-		<string>10</string>
-		<key>policy_action_type</key>
-		<string>Cache</string>
+		<key>THIN_PROV_POLICY_TEMPLATE</key>
+		<string>PolicyTemplate-ThinProv.xml</string>
+		<key>THIN_PROV_POLICY_NAME</key>
+		<string>13-Install%NAME%</string>
+		<key>THIN_PROV_POLICY_CATEGORY</key>
+		<string>4-Thin-Provisioning</string>
 		<key>version</key>
 		<string></string>
 	</dict>
@@ -55,12 +57,35 @@
 				</array>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Cache</string>
 				<key>policy_category</key>
 				<string>%POLICY_CATEGORY%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>package_info</key>
+				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
+				<key>thin_prov_policy_category</key>
+				<string>%THIN_PROV_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%THIN_PROV_POLICY_TEMPLATE%</string>
+				<key>thin_prov_policy_name</key>
+				<string>%THIN_PROV_POLICY_NAME%</string>
 				<key>version</key>
 				<string>%version%</string>
 			</dict>
