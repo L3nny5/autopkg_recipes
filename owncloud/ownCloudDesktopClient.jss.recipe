@@ -43,8 +43,12 @@ and share functionalities with the software “ownCloud Enterprise“. The servi
 		<string>owncloud.png</string>
 		<key>package_boot_volume_required</key>
 		<string>false</string>
-		<key>package_priority</key>
-		<string>10</string>
+		<key>THIN_PROV_POLICY_TEMPLATE</key>
+		<string>PolicyTemplate-ThinProv.xml</string>
+		<key>THIN_PROV_POLICY_NAME</key>
+		<string>17-Install%NAME%</string>
+		<key>THIN_PROV_POLICY_CATEGORY</key>
+		<string>4-Thin-Provisioning</string>
 		<key>version</key>
 		<string></string>
 	</dict>
@@ -118,6 +122,27 @@ and share functionalities with the software “ownCloud Enterprise“. The servi
 				<string>%SELF_SERVICE_FEATURE_MAINPAGE%</string>
 				<key>self_service_icon</key>
 				<string>%SELF_SERVICE_ICON%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>package_info</key>
+				<string>%PKGINAME% %version%</string>
+				<key>policy_action_type</key>
+				<string>Install</string>
+				<key>thin_prov_policy_category</key>
+				<string>%THIN_PROV_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%THIN_PROV_POLICY_TEMPLATE%</string>
+				<key>thin_prov_policy_name</key>
+				<string>%THIN_PROV_POLICY_NAME%</string>
 				<key>version</key>
 				<string>%version%</string>
 			</dict>
