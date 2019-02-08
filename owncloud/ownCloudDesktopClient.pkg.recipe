@@ -11,7 +11,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gerardkok.download.ownCloudDesktopClient</string>
+	<string>com.github.l3nny5.download.ownCloudDesktopClient</string>
 	<key>Process</key>
 	<array>
 		<dict>
