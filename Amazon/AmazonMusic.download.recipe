@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Amazon Music</string>
 		<key>SEARCH_PATTERN</key>
-		<string>(?P&lt;url&gt;https:\/\/[A-Za-z0-9.-]+amazon.com\/.*?\/AmazonMusicInstaller.dmg)</string>
+		<string>(?P&lt;url&gt;https://[A-Za-z0-9.-]+amazon.com/.*?/AmazonMusicInstaller.dmg)</string>
 		<key>SEARCH_URL</key>
 		<string>https://www.amazon.de/gp/dmusic/desktop/downloadPlayer?ref=dm_mo_cpw_inst</string>
 		<key>USER_AGENT</key>
