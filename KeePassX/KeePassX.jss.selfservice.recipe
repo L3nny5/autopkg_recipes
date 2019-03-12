@@ -40,18 +40,9 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.pkg.KeePassX</string>
+	<string>com.github.l3nny5.pkg.KeePassX</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>download_changed == False</string>
-			</dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
