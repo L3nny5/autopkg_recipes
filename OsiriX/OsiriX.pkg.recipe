@@ -59,25 +59,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/Resources/OsiriXQuickLookPlugin.qlgenerator.zip</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>purge_destination</key>
-				<false/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>Library/QuickLook</key>
-					<string>0755</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
@@ -92,17 +77,6 @@
 				<string>%pkgroot%/Applications/OsiriX Lite.app</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/OsiriX Lite.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Library/QuickLook/OsiriXQuickLookPlugin.qlgenerator</string>
-				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/OsiriXQuickLookPlugin.qlgenerator</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
