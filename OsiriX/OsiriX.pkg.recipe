@@ -96,14 +96,6 @@
 							<key>user</key>
 							<string>root</string>
 						</dict>
-						<dict>
-							<key>group</key>
-							<string>wheel</string>
-							<key>path</key>
-							<string>Library</string>
-							<key>user</key>
-							<string>root</string>
-						</dict>
 					</array>
 					<key>id</key>
 					<string>com.rossetantoine.osirix</string>
