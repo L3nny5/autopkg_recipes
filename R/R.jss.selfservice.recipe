@@ -68,8 +68,6 @@
 						<string>%GROUP_TEMPLATE%</string>
 					</dict>
 				</array>
-				<key>os_requirements</key>
-				<string>%OS_REQUIREMENTS%</string>
 				<key>package_info</key>
 				<string>%PKGINAME% %version%</string>
 				<key>pkg_path</key>
