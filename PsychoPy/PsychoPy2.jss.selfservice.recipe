@@ -40,7 +40,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.bochoven.recipes.pkg.PsychoPy2</string>
+	<string>com.github.l3nny5.pkg.PsychoPy2</string>
 	<key>Process</key>
 	<array>
 		<dict>
