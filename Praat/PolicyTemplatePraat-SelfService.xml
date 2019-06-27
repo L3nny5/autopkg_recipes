@@ -10,11 +10,8 @@
 	<package_configuration>
 		<packages>
 			<package>
-				<name>Praat Fonts.pkg</name>
+				<name>PraatFonts-1.0.pkg</name>
 				<action>Install</action>
-				<fut>false</fut>
-				<feu>false</feu>
-				<update_autorun>false</update_autorun>
 			</package>
 		</packages>
 		<!--Package added by JSSImporter-->
