@@ -5,7 +5,7 @@
             <key>Description</key>
             <string>Downloads Adobe Flash Player installer and extracts the embedded package.</string>
             <key>Identifier</key>
-            <string>com.github.l3nny5.pkg.FlashPlayerExtractPackage</string>
+            <string>com.github.l3nny5.pkg.FlashPlayer</string>
             <key>Input</key>
             <dict>
                   <key>NAME</key>
