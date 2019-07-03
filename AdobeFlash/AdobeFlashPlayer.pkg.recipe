@@ -78,9 +78,7 @@ install_dir=$(dirname $0)
 /usr/sbin/installer -dumplog -verbose -pkg ${install_dir}/"AdobeFlashPlayer.pkg" -target "$3"
 
 # Set Update Settings to not inform
-if [ -d "/Library/Application Support/Macromedia" ]; then
-echo "/Library/Application Support/Macromedia exists already"
-else
+if [ ! -d "/Library/Application Support/Macromedia" ]; then
 mkdir "/Library/Application Support/Macromedia"
 fi
 {
