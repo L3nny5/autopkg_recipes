@@ -10,8 +10,8 @@
             <dict>
                   <key>NAME</key>
                   <string>Logitech Control Center</string>
-                  <key>USER_AGENT</key>
-      		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15</string>
+                  <key>COOKIE</key>
+      		<string>BASE=en-us</string>
             </dict>
             <key>MinimumVersion</key>
             <string>0.3.1</string>
@@ -28,8 +28,8 @@
                               <string>(?P&lt;url&gt;https:\/\/download01\.logi\.com\/web\/ftp\/pub\/techsupport\/mouse\/mac\/lcc.*?\.zip)</string>
                               <key>request_headers</key>
                               <dict>
-                                    <key>user-agent</key>
-                                    <string>%USER_AGENT%</string>
+                                    <key>Cookie</key>
+                                    <string>%COOKIE%</string>
                               </dict>
                         </dict>
                   </dict>
