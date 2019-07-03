@@ -11,7 +11,7 @@
                   <key>NAME</key>
                   <string>Logitech Control Center</string>
                   <key>COOKIE</key>
-      		<string>BASE=en-us</string>
+      		<string>dc:def:u=ba29f322-1c35-4e58-9164-d87afb6da971</string>
             </dict>
             <key>MinimumVersion</key>
             <string>0.3.1</string>
