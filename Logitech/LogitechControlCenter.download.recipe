@@ -22,7 +22,6 @@
                         <string>URLTextSearcher</string>
                         <key>Arguments</key>
                         <dict>
-                              <string>https://support.logi.com/hc/en-us/articles/360025297833</string>
                               <key>url</key>
                               <string>https://support.logi.com/hc/en-us/articles/360025297833</string>
                               <key>re_pattern</key>
