@@ -45,10 +45,7 @@
                         <key>Arguments</key>
                         <dict>
                               <key>pkgdirs</key>
-                              <dict>
-                                    <key>Applications</key>
-                                    <string>0775</string>
-                              </dict>
+                              <dict />
                               <key>pkgroot</key>
                               <string>%RECIPE_CACHE_DIR%/pkgroot</string>
                         </dict>
