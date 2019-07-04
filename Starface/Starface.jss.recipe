@@ -6,7 +6,7 @@
 		<string>Creates PKG of Starface (you have to download it first and put it into the folder), uploads it to the JSS and creates SelfService Policy.
 			use autopkg run -vv com.github.l3nny5.jss.patchoo.Starface -p STARFACE UCC Client*.zip to create it</string>
 		<key>Identifier</key>
-		<string>com.github.l3nny5.jss.patchoo.Starface</string>
+		<string>com.github.l3nny5.jss.starface</string>
 		<key>Input</key>
 		<dict>
 			<key>CATEGORY</key>
