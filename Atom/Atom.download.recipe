@@ -3,8 +3,7 @@
 <plist version="1.0">
       <dict>
             <key>Description</key>
-            <string>Downloads the latest release PKG copy of the Rocket Chat Client (RocketChat.Electron) from Github. Set PRERELEASE to a non-empty string to download prereleases, either via Input in an override or via the -k option, i.e.: `-k
-                  PRERELEASE=yes` copy of com.github.apizz.pkg.RocketChatClient recipe to correct</string>
+            <string>Downloads the latest release of Atom from Github.</string>
             <key>Identifier</key>
             <string>com.github.l3nny5.download.Atom</string>
             <key>Input</key>
@@ -40,7 +39,7 @@
                         <key>Arguments</key>
                         <dict>
                               <key>filename</key>
-                              <string>%NAME%-%version%.zip</string>
+                              <string>%NAME%.zip</string>
                         </dict>
                         <key>Processor</key>
                         <string>URLDownloader</string>
@@ -50,14 +49,41 @@
                         <string>EndOfCheckPhase</string>
                   </dict>
                   <dict>
-      			<key>Arguments</key>
-      			<dict>
-      				<key>predicate</key>
-      				<string>download_changed == False</string>
-      			</dict>
-      			<key>Processor</key>
-      			<string>StopProcessingIf</string>
-      		</dict>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>predicate</key>
+                              <string>download_changed == False</string>
+                        </dict>
+                        <key>Processor</key>
+                        <string>StopProcessingIf</string>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>Unarchiver</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>archive_path</key>
+                              <string>%pathname%</string>
+                              <key>destination_path</key>
+                              <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                              <key>purge_destination</key>
+                              <true />
+                        </dict>
+                  </dict>
+                  <dict>
+                        <key>Processor</key>
+                        <string>CodeSignatureVerifier</string>
+                        <key>Arguments</key>
+                        <dict>
+                              <key>input_path</key>
+                              <string>%RECIPE_CACHE_DIR%/%NAME%/Atom.app</string>
+                              <key>requirement</key>
+                              <string>identifier "com.github.atom" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate
+                                    leaf[subject.OU] = VEKTX9H2N7</string>
+                              <key>strict_verification</key>
+                              <true />
+                        </dict>
+                  </dict>
             </array>
       </dict>
 </plist>
