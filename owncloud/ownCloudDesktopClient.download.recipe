@@ -35,6 +35,8 @@
                               <string>%download_url%</string>
                               <key>filename</key>
                               <string>%NAME%.pkg</string>
+                              <key>CHECK_FILESIZE_ONLY</key>
+      				<true/>
                         </dict>
                         <key>Processor</key>
                         <string>URLDownloader</string>
